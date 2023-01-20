@@ -1,14 +1,21 @@
 {
-  "name": "components",
+  "name": "@lucky-design/components",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "build": "tsc && vite build",
+    "build-watch": "tsc && vite build --watch"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "unplugin-auto-import": "^0.12.1",
     "vite": "^4.0.0",
