@@ -1,0 +1,17 @@
+{
+  "name": "components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "unplugin-auto-import": "^0.12.1",
+    "vite": "^4.0.0",
+    "vitest": "^0.27.2"
+  }
+}
