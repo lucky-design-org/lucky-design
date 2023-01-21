@@ -1,2 +1,2 @@
-export type IButtonProps = {
+export interface IButtonProps {
 }
