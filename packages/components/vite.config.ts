@@ -8,15 +8,6 @@ export default defineConfig({
       include: [
         /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
       ],
-      imports: [
-        {
-          'vitest': [
-            'it',
-            'describe',
-            'expect'
-          ],
-        },
-      ],
     }),
   ],
 })

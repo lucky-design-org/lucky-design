@@ -1,2 +1,1 @@
-export type ITreeProps = {
-}
+export interface ITreeProps {}

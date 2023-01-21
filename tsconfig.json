@@ -1,18 +1,29 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "strict": true,
-    "jsx": "preserve",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["esnext", "dom"],
+    "moduleResolution": "node",
     "esModuleInterop": true,
-    "lib": ["ESNext", "DOM"],
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "skipDefaultLibCheck": true,
     "skipLibCheck": true,
-    "noEmit": true
+    "jsx": "preserve",
+    "types": ["node", "vite/client"],
+    "paths": {
+      "@lucky-design/components": ["./packages/components/index.ts"],
+      "@lucky-design/common": ["./packages/common/index.ts"]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "exclude": [
+    "**/dist/**",
+    "**/node_modules/**",
+    "**/test/dts/**",
+    "**/playground/**",
+    "**/example/**",
+    "**/packages/components/**"
+  ]
 }

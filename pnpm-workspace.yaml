@@ -1,5 +1,4 @@
 packages:
-  - packages/*
-  - docs/*
-  - playground/*
-  - internal/*
+  - 'packages/*'
+  - 'docs/*'
+  - 'playground/*'
