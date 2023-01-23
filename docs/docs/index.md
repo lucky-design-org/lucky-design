@@ -1,6 +1,5 @@
 ---
 layout: home
-page: true
 
 title: Lucky-Design
 editLink: true
@@ -20,7 +19,7 @@ hero:
       text: 组件
       link: /components/
 features:
-  - icon: ⚡️
+  - icon: 🔨
     title: 功能/特点 1
     details: 功能/特点 1 具体描述信息。
   - icon: 🧩

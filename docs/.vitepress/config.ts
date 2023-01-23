@@ -1,10 +1,10 @@
 import { defineConfig } from 'vitepress'
-import type { NavItem, Sidebar, SocialLink } from '../../types/vitepress'
+import type { NavItem, Sidebar, SocialLink } from '../types/vitepress'
 
 export default defineConfig({
   title: 'lucky-design',
   description: 'Just playing around',
-  lang: 'cn-ZH',
+  lang: 'zh-CN',
   base: '/',
   themeConfig: {
     // 网站header部分标题
