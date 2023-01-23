@@ -1,5 +1,8 @@
-import Button from './src/button.vue'
+import { withInstall } from '@lucky-design/common'
+import Button from './button.vue'
 
-export default Button
+export const LButton = withInstall(Button, 'LButton')
 
-export * from './src/button'
+export default LButton
+
+export * from './props'

@@ -9,9 +9,8 @@
     "access": "public"
   },
   "scripts": {
-    "test": "vitest",
-    "build": "tsc && vite build",
-    "build-watch": "tsc && vite build --watch"
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --skipLibCheck",
+    "dev": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
   },
   "keywords": [],
   "author": "",
