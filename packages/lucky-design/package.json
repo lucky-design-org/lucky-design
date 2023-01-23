@@ -1,0 +1,35 @@
+{
+  "name": "lucky-design",
+  "type": "module",
+  "version": "0.0.1",
+  "license": "MIT",
+  "keywords": [
+    "lucky-design",
+    "unocss",
+    "vueuse"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/lucky-design.umd.cjs",
+      "import": "./dist/lucky-design.js"
+    }
+  },
+  "main": "./dist/lucky-design.umd.cjs",
+  "module": "./dist/lucky-design.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build",
+    "dev": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
+  },
+  "dependencies": {
+    "@lucky-design/components": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

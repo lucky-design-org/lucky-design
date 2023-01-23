@@ -1,5 +1,8 @@
-import Tree from './src/tree.vue'
+import { withInstall } from '@lucky-design/common'
+import Tree from './tree.vue'
 
-export default Tree
+export const LTree = withInstall(Tree, 'LTree')
 
-export * from './src/tree'
+export default LTree
+
+export * from './props'

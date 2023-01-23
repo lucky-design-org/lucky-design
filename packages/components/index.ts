@@ -1,2 +1,2 @@
-export { default as Button } from './button'
-export { default as Tree } from './tree'
+export * from './button'
+export * from './tree'

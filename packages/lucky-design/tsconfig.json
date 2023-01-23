@@ -6,8 +6,6 @@
   "include": [
     "**/*.ts",
     "**/*.d.ts",
-    "**/*.vue",
-    "**/*.tsx"
   ],
   "compilerOptions": {
     "declaration": false,
