@@ -3,7 +3,7 @@ import { plugins } from './components'
 
 export * from './components'
 
-export const INSTALLED_KEY = Symbol('LuckDesign_Installed')
+export const INSTALLED_KEY = Symbol('LuckyDesign_Installed')
 
 function createInstaller(components: Plugin[]) {
   const install = (app: App, options = {}) => {

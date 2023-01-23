@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "esno scripts/build.ts",
     "prepare": "husky install",
-    "lint": "eslint --fix --ext .js,.ts,.tsx,.vue .",
+    "lint": "eslint --fix --ext .js,.ts,.tsx,.vue",
     "test": "vitest run",
     "test:cover": "vitest run --coverage",
     "test:dev": "vitest dev",
