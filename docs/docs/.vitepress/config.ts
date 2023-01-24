@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import type { NavItem, Sidebar, SocialLink } from '../types/vitepress'
+import type { NavItem, Sidebar, SocialLink } from '../../types/vitepress'
 
 export default defineConfig({
   title: 'lucky-design',
@@ -7,6 +7,7 @@ export default defineConfig({
   lang: 'zh-CN',
   base: '/',
   themeConfig: {
+    logo: '../image/logo.png',
     // 网站header部分标题
     siteTitle: 'lucky-design',
     // 顶部tab-bar
@@ -42,6 +43,11 @@ export default defineConfig({
       pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
       text: 'Edit this page on GitHub',
     },
+    // algolia: {
+    //   appId: '...',
+    //   apiKey: '...',
+    //   indexName: '...',
+    // },
   },
   lastUpdated: true,
   markdown: {
