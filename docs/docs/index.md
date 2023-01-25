@@ -9,7 +9,7 @@ hero:
   text: 一款基于Vue的简洁美观的组件库
   tagline: Vue
   image:
-    src: ./image/logo2.png
+    src: /image/icon.png
     alt: lucky-design
   actions:
     - theme: brand

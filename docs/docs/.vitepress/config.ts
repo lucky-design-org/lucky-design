@@ -6,8 +6,11 @@ export default defineConfig({
   description: 'Just playing around',
   lang: 'zh-CN',
   base: '/',
+  head: [
+    ['link', { rel: 'icon', href: '/image/icon.ico' }],
+  ],
   themeConfig: {
-    logo: '../image/logo.png',
+    logo: '/image/icon.png',
     // 网站header部分标题
     siteTitle: 'lucky-design',
     // 顶部tab-bar
