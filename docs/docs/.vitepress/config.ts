@@ -5,6 +5,7 @@ export default defineConfig({
   title: 'lucky-design',
   description: 'Just playing around',
   lang: 'zh-CN',
+  appearance: 'dark',
   base: '/',
   head: [
     ['link', { rel: 'icon', href: '/image/icon.ico' }],
@@ -23,13 +24,22 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Guide',
+        collapsible: true,
         items: [
           { text: 'about', link: '/about' },
           { text: 'profile', link: '/profile' },
         ],
       },
+      {
+        text: 'Components',
+        collapsible: true,
+        items: [
+          { text: 'button', link: '/button' },
+          { text: 'icon', link: '/icon' },
+        ],
+      },
     ] as Sidebar,
-    outlineTitle: 'In hac pagina',
+    outlineTitle: 'In hac page',
     // 社交账号链接
     socialLinks: [
       {

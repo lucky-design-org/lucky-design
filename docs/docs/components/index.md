@@ -1,5 +1,5 @@
-# 组件总览
+# Component overview
 
 - button
 
-- alert
+- icon
