@@ -56,11 +56,11 @@ export default defineConfig({
       pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
       text: 'Edit this page on GitHub',
     },
-    // algolia: {
-    //   appId: '...',
-    //   apiKey: '...',
-    //   indexName: '...',
-    // },
+    algolia: {
+      appId: 'Z7DZ7S5F34',
+      apiKey: 'f2fc637edfcc09751dcea9a8e26350f4',
+      indexName: 'lucky-design',
+    },
   },
   lastUpdated: true,
   markdown: {
