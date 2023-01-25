@@ -5,9 +5,13 @@ export default defineConfig({
   title: 'lucky-design',
   description: 'Just playing around',
   lang: 'zh-CN',
+  appearance: 'dark',
   base: '/',
+  head: [
+    ['link', { rel: 'icon', href: '/image/icon.ico' }],
+  ],
   themeConfig: {
-    logo: '../image/logo.png',
+    logo: '/image/icon.png',
     // 网站header部分标题
     siteTitle: 'lucky-design',
     // 顶部tab-bar
@@ -20,13 +24,22 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Guide',
+        collapsible: true,
         items: [
           { text: 'about', link: '/about' },
           { text: 'profile', link: '/profile' },
         ],
       },
+      {
+        text: 'Components',
+        collapsible: true,
+        items: [
+          { text: 'button', link: '/button' },
+          { text: 'icon', link: '/icon' },
+        ],
+      },
     ] as Sidebar,
-    outlineTitle: 'In hac pagina',
+    outlineTitle: 'In hac page',
     // 社交账号链接
     socialLinks: [
       {
@@ -43,11 +56,11 @@ export default defineConfig({
       pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
       text: 'Edit this page on GitHub',
     },
-    // algolia: {
-    //   appId: '...',
-    //   apiKey: '...',
-    //   indexName: '...',
-    // },
+    algolia: {
+      appId: 'Z7DZ7S5F34',
+      apiKey: 'f2fc637edfcc09751dcea9a8e26350f4',
+      indexName: 'lucky-design',
+    },
   },
   lastUpdated: true,
   markdown: {
