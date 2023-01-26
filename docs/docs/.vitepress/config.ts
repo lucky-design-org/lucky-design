@@ -8,10 +8,10 @@ export default defineConfig({
   appearance: 'dark',
   base: '/',
   head: [
-    ['link', { rel: 'icon', href: '/image/icon.ico' }],
+    ['link', { rel: 'icon', href: '/icon.ico' }],
   ],
   themeConfig: {
-    logo: '/image/icon.png',
+    logo: '/icon.png',
     // 网站header部分标题
     siteTitle: 'lucky-design',
     // 顶部tab-bar
