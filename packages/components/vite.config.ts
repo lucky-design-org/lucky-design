@@ -1,9 +1,9 @@
-// vite.config.ts
 import path from 'node:path'
 import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import VueJSX from '@vitejs/plugin-vue-jsx'
+import Unocss from 'unocss/vite'
 
 export default defineConfig({
   build: {
@@ -32,5 +32,6 @@ export default defineConfig({
       ],
       dts: 'auto-imports.d.ts',
     }),
+    Unocss(),
   ],
 })
