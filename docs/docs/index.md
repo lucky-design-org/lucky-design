@@ -17,7 +17,7 @@ hero:
       link: /guide/
     - theme: alt
       text: View on Github
-      link: https://github.com/ByteDanceYouthTrainCamp/lucky-design
+      link: https://github.com/lucky-design-org/lucky-design
 features:
   - icon: 🔨
     title: feature1

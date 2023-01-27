@@ -4,7 +4,7 @@ import type { NavItem, Sidebar, SocialLink } from '../../types/vitepress'
 export default defineConfig({
   title: 'lucky-design',
   description: 'Just playing around',
-  lang: 'zh-CN',
+  lang: 'en-US',
   appearance: 'dark',
   base: '/',
   head: [
@@ -44,7 +44,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/ByteDanceYouthTrainCamp/lucky-design',
+        link: 'https://github.com/lucky-design-org/lucky-design',
       },
     ] as SocialLink[],
     // footer
@@ -59,7 +59,7 @@ export default defineConfig({
     algolia: {
       appId: 'Z7DZ7S5F34',
       apiKey: 'f2fc637edfcc09751dcea9a8e26350f4',
-      indexName: 'lucky-design',
+      indexName: 'Lucky-design',
     },
   },
   lastUpdated: true,
