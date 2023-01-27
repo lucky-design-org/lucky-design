@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@lucky-design/components": ["./packages/components/index.ts"],
-      "@lucky-design/common": ["./packages/common/index.ts"]
+      "@lucky-design/common": ["./packages/common/index.ts"],
+      "@lucky-design/preset": ["./packages/preset/index.ts"]
     }
   },
   "exclude": [

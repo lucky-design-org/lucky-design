@@ -12,11 +12,25 @@
     "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --skipLibCheck",
     "dev": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
   },
+  "exports": {
+    ".": {
+      "types": "./dist/components/index.d.ts",
+      "require": "./dist/components.umd.cjs",
+      "import": "./dist/components.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "@lucky-design/common": "workspace:*",
+    "@lucky-design/preset": "workspace:*"
+  },
   "devDependencies": {
-    "unplugin-auto-import": "^0.12.1",
-    "@lucky-design/common": "workspace:*"
+    "unplugin-auto-import": "^0.12.1"
   }
 }
