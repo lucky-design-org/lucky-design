@@ -1,5 +1,5 @@
 {
-  "index_name": "lucky-design",
+  "index_name": "Lucky-design",
   "start_urls": ["https://lucky-design.vercel.app/"],
   "rateLimit": 8,
   "maxDepth": 10,

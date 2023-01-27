@@ -1,5 +1,5 @@
-# Component overview
+# 组件总览
 
-- button
+- 按钮
 
-- icon
+- 图标
