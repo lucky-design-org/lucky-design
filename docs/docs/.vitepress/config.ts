@@ -3,8 +3,8 @@ import type { NavItem, Sidebar, SocialLink } from '../../types/vitepress'
 
 export default defineConfig({
   title: 'lucky-design',
-  description: 'Just playing around',
-  lang: 'en-US',
+  description: '基于Vue3的高效美观的组件库',
+  lang: 'zh-CN',
   appearance: 'dark',
   base: '/',
   head: [
@@ -12,34 +12,36 @@ export default defineConfig({
   ],
   themeConfig: {
     logo: '/icon.png',
+
     // 网站header部分标题
     siteTitle: 'lucky-design',
+
     // 顶部tab-bar
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/' },
-      { text: 'Components', link: '/components/' },
+      { text: '指南', link: '/guide/', activeMatch: '/guide/' },
+      { text: '组件', link: '/components/', activeMatch: '/components/' },
     ] as NavItem[],
+
     // slider-bar
     sidebar: [
       {
-        text: 'Guide',
+        text: '导航',
         collapsible: true,
         items: [
-          { text: 'about', link: '/about' },
-          { text: 'profile', link: '/profile' },
+          { text: '安装', link: '/guide/install' },
+          { text: '快速开始', link: '/guide/start' },
         ],
       },
       {
-        text: 'Components',
+        text: '组件',
         collapsible: true,
         items: [
-          { text: 'button', link: '/button' },
-          { text: 'icon', link: '/icon' },
+          { text: 'Button 按钮', link: '/components/button' },
+          { text: 'Icon 图标', link: '/components/icon' },
         ],
       },
     ] as Sidebar,
-    outlineTitle: 'In hac page',
+
     // 社交账号链接
     socialLinks: [
       {
@@ -47,6 +49,7 @@ export default defineConfig({
         link: 'https://github.com/lucky-design-org/lucky-design',
       },
     ] as SocialLink[],
+
     // footer
     footer: {
       message: 'Released under the MIT License.',
@@ -62,6 +65,7 @@ export default defineConfig({
       indexName: 'Lucky-design',
     },
   },
+
   lastUpdated: true,
   markdown: {
     theme: 'material-darker',
