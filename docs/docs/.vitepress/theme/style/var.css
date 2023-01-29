@@ -1,11 +1,11 @@
 :root {
   /* 标题 */
   --vp-home-hero-name-color: #5B16C2;
-  --vp-home-hero-name-background: linear-gradient( 135deg, #ad6cc5 10%, #5B16C2 100%);
+  --vp-home-hero-name-background: linear-gradient(#5B16C2 100%);
 
   /* 图标背景 */
-  --vp-home-hero-image-background-image: linear-gradient( 135deg, #a248ba 10%, #5B16C2 100%);
-  --vp-home-hero-image-filter: blur(150px);
+  --vp-home-hero-image-background-image: linear-gradient( 135deg, #5726a1 50%, #5019a2 50%);
+  --vp-home-hero-image-filter: blur(56px);
 
   /* brand按钮 */
   --vp-button-brand-border: #5B16C2;

@@ -1,11 +1,11 @@
-# 环境
+# environment
 
-由于 Vue3 不再支持 IE11，lucky-design 也不支持 IE 浏览器
+Since Vue3 no longer supports IE11, lucky-design does not support IE browser either
 
-# 安装
+# install
 
 ```cmd
-# 选择一个你喜欢的包管理器
+# Choose a package manager of your liking
 
 # NPM
 $ npm install lucky-design --save
