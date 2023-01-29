@@ -1,128 +1,35 @@
 export default {
-  vitepressConfig: {
-    title: 'lucky-design',
-    lang: 'zh-CN',
-    description: '轻量级的Vue3组件库',
-  },
+  label: '简体中文',
+  lang: 'zh-CN',
+  link: '/zh-CN/',
+  description: '基于Vue3的高效美观的组件库',
   themeConfig: {
-    label: '简体中文123',
-    selectText: '选择语言',
-    editLinkText: '对本页提出修改建议',
-    lastUpdated: '最后更新',
-
     nav: [
-      { text: '指南', link: '/zh-CN/guide/index' },
-      { text: '组件', link: '/zh-CN/components/index' },
+      { text: '指南', link: '/zh-CN/guide/', activeMatch: '/zh-CN/guide' },
       {
-        text: '相关链接',
-        items: [
-          {
-            text: '论坛',
-            link: 'https://github.com/vuejs/pinia/discussions',
-          },
-          {
-            text: '聊天室',
-            link: 'https://chat.vuejs.org',
-          },
-          {
-            text: 'Twitter',
-            link: 'https://twitter.com/posva',
-          },
-          {
-            text: '更新日志',
-            link: 'https://github.com/vuejs/pinia/blob/v2/packages/pinia/CHANGELOG.md',
-          },
-        ],
+        text: '组件',
+        link: '/zh-CN/components/',
+        activeMatch: '/zh-CN/components',
       },
     ],
-
     sidebar: {
-      '/zh/api/': [
+      '/zh-CN/guide': [
         {
-          text: 'packages',
-          children: [
-            { text: 'pinia', link: '/zh/api/modules/pinia.html' },
-            { text: '@pinia/nuxt', link: '/zh/api/modules/pinia_nuxt.html' },
-            {
-              text: '@pinia/testing',
-              link: '/zh/api/modules/pinia_testing.html',
-            },
+          text: '导航',
+          collapsible: true,
+          items: [
+            { text: '安装', link: '/zh-CN/guide/install' },
+            { text: '快速开始', link: '/zh-CN/guide/start' },
           ],
         },
       ],
-      '/zh/': [
+      '/zh-CN/components': [
         {
-          text: '介绍',
-          children: [
-            {
-              text: 'Pinia 是什么？',
-              link: '/zh/introduction.html',
-            },
-            {
-              text: '开始',
-              link: '/zh/getting-started.html',
-            },
-          ],
-        },
-        {
-          text: '核心概念',
-          children: [
-            { text: '定义 Store', link: '/zh/core-concepts/' },
-            { text: 'State', link: '/zh/core-concepts/state.html' },
-            { text: 'Getter', link: '/zh/core-concepts/getters.html' },
-            { text: 'Action', link: '/zh/core-concepts/actions.html' },
-            { text: '插件', link: '/zh/core-concepts/plugins.html' },
-            {
-              text: '组件外的 Store',
-              link: '/zh/core-concepts/outside-component-usage.html',
-            },
-          ],
-        },
-        {
-          text: '服务端渲染 (SSR)',
-          children: [
-            {
-              text: 'Vue 与 Vite',
-              link: '/zh/ssr/',
-            },
-            {
-              text: 'Nuxt.js',
-              link: '/zh/ssr/nuxt.html',
-            },
-          ],
-        },
-        {
-          text: '手册',
-          link: '/zh/cookbook/',
-          children: [
-            {
-              text: '从 Vuex ≤4 迁移',
-              link: '/zh/cookbook/migration-vuex.html',
-            },
-            {
-              text: '热更新',
-              link: '/zh/cookbook/hot-module-replacement.html',
-            },
-            {
-              text: '测试',
-              link: '/zh/cookbook/testing.html',
-            },
-            {
-              text: '不使用 setup() 的用法',
-              link: '/zh/cookbook/options-api.html',
-            },
-            {
-              text: '组合式 Stores',
-              link: '/zh/cookbook/composing-stores.html',
-            },
-            {
-              text: '从 v0/v1 迁移至 v2',
-              link: '/zh/cookbook/migration-v1-v2.html',
-            },
-            {
-              text: '处理组合式函数',
-              link: '/zh/cookbook/composables.html',
-            },
+          text: '组件',
+          collapsible: true,
+          items: [
+            { text: 'Button 按钮', link: '/zh-CN/components/button' },
+            { text: 'Icon 图标', link: '/zh-CN/components/icon' },
           ],
         },
       ],

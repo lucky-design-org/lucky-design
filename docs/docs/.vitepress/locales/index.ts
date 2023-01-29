@@ -1,13 +1,7 @@
-import en from './en-US'
-import zh from './zh-CN'
+import en from './en-US.js'
+import zh from './zh-CN.js'
 
 export default {
-  vitepressConfig: {
-    '/': zh.vitepressConfig,
-    '/en-US': en.vitepressConfig,
-  },
-  themeConfig: {
-    '/': zh.themeConfig,
-    '/en-US': en.themeConfig,
-  },
+  en,
+  zh,
 }
