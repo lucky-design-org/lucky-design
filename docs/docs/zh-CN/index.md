@@ -6,17 +6,17 @@ editLink: true
 lastUpdated: true
 hero:
   name: Lucky-Design
-  text: lightweight component library
-  tagline: Simple, powerful, pretty, and performant
+  text: 一款基于Vue3的轻量级组件库
+  tagline: 简洁, 强大, 美观, 高效的
   image:
     src: /icon.png
     alt: lucky-design
   actions:
     - theme: brand
-      text: Get Starred
+      text: 快速开始
       link: /guide/
     - theme: alt
-      text: View on Github
+      text: 访问 Github
       link: https://github.com/lucky-design-org/lucky-design
 features:
   - icon: 🔨

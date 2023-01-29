@@ -1,46 +1,93 @@
 import { defineConfig } from 'vitepress'
-import type { NavItem, Sidebar, SocialLink } from '../../types/vitepress'
 
 export default defineConfig({
   title: 'lucky-design',
-  description: '基于Vue3的高效美观的组件库',
-  lang: 'zh-CN',
   appearance: 'dark',
-  base: '/',
-  head: [
-    ['link', { rel: 'icon', href: '/icon.ico' }],
-  ],
+  locales: {
+    'root': {
+      label: 'English',
+      lang: 'en-US',
+      description: 'lightweight component library',
+      themeConfig: {
+        nav: [
+          { text: 'Guide', link: '/guide/', activeMatch: '/guide' },
+          {
+            text: 'Components',
+            link: '/components/',
+            activeMatch: '/components',
+          },
+        ],
+        sidebar: {
+          '/guide': [
+            {
+              text: 'Guide',
+              collapsible: true,
+              items: [
+                { text: 'Install', link: '/guide/install' },
+                { text: 'Start', link: '/guide/start' },
+              ],
+            },
+          ],
+          '/components': [
+            {
+              text: 'Component',
+              collapsible: true,
+              items: [
+                { text: 'Button', link: '/components/button' },
+                { text: 'Icon', link: '/components/icon' },
+              ],
+            },
+          ],
+        },
+      },
+    },
+    'zh-CN': {
+      label: '简体中文',
+      lang: 'zh-CN',
+      link: '/zh-CN/',
+      description: '基于Vue3的高效美观的组件库',
+      themeConfig: {
+        nav: [
+          { text: '指南', link: '/zh-CN/guide/', activeMatch: '/zh-CN/guide' },
+          {
+            text: '组件',
+            link: '/zh-CN/components/',
+            activeMatch: '/zh-CN/components',
+          },
+        ],
+        sidebar: {
+          '/zh-CN/guide': [
+            {
+              text: '导航',
+              collapsible: true,
+              items: [
+                { text: '安装', link: '/zh-CN/guide/install' },
+                { text: '快速开始', link: '/zh-CN/guide/start' },
+              ],
+            },
+          ],
+          '/zh-CN/components': [
+            {
+              text: '组件',
+              collapsible: true,
+              items: [
+                { text: 'Button 按钮', link: '/zh-CN/components/button' },
+                { text: 'Icon 图标', link: '/zh-CN/components/icon' },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  head: [['link', { rel: 'icon', href: '/icon.ico' }]],
   themeConfig: {
     logo: '/icon.png',
 
     // 网站header部分标题
     siteTitle: 'lucky-design',
 
-    // 顶部tab-bar
-    nav: [
-      { text: '指南', link: '/guide/', activeMatch: '/guide/' },
-      { text: '组件', link: '/components/', activeMatch: '/components/' },
-    ] as NavItem[],
-
     // slider-bar
-    sidebar: [
-      {
-        text: '导航',
-        collapsible: true,
-        items: [
-          { text: '安装', link: '/guide/install' },
-          { text: '快速开始', link: '/guide/start' },
-        ],
-      },
-      {
-        text: '组件',
-        collapsible: true,
-        items: [
-          { text: 'Button 按钮', link: '/components/button' },
-          { text: 'Icon 图标', link: '/components/icon' },
-        ],
-      },
-    ] as Sidebar,
 
     // 社交账号链接
     socialLinks: [
@@ -48,7 +95,7 @@ export default defineConfig({
         icon: 'github',
         link: 'https://github.com/lucky-design-org/lucky-design',
       },
-    ] as SocialLink[],
+    ],
 
     // footer
     footer: {
@@ -68,7 +115,7 @@ export default defineConfig({
 
   lastUpdated: true,
   markdown: {
-    theme: 'material-darker',
+    theme: 'material-theme-palenight',
     lineNumbers: true,
   },
 })
