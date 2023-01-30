@@ -24,4 +24,4 @@ function createInstaller(components: Plugin[]) {
 
 export * from '@lucky-design/components'
 
-export default createInstaller(plugins)
+export default createInstaller(plugins as unknown as Plugin[])

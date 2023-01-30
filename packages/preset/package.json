@@ -23,5 +23,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@unocss/preset-mini": "^0.49.1"
   }
 }

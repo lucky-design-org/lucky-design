@@ -5,10 +5,7 @@ const props = defineProps(buttonProps)
 </script>
 
 <template>
-  <div>
+  <div class="ld-button">
     {{ props.type }}
   </div>
 </template>
-
-<style scoped>
-</style>
