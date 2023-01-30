@@ -97,7 +97,10 @@ importers:
       '@lucky-design/components': link:../components
 
   packages/preset:
-    specifiers: {}
+    specifiers:
+      '@unocss/preset-mini': ^0.49.1
+    dependencies:
+      '@unocss/preset-mini': 0.49.1
 
   playground:
     specifiers:
@@ -1542,6 +1545,10 @@ packages:
     resolution: {integrity: sha512-rnA93tsfqMJ8isrmgh8w48oJZryWdtLQD2JpERwW95xi4WdWWIFozR9xMwvd6xOGOaBhbttak6xdsv4nmCFvIA==}
     dev: true
 
+  /@unocss/core/0.49.1:
+    resolution: {integrity: sha512-l+L1c8eCwfaQA1sAYDE+xJ+r9ocfyTo9KzRUOIy5eV/wxC82HoLtJN8wIGuWaY8fGQh/gT74Czfq7g7BFNKhaw==}
+    dev: false
+
   /@unocss/inspector/0.49.0:
     resolution: {integrity: sha512-VHHr8vdar60jOBpDTh2WcgopBB7yL4XfH40cNX+wy5KhLKdpxKxjE3DqpDNpqzaJia/79KPV3PvMBKMs+6vNUQ==}
     dependencies:
@@ -1570,6 +1577,12 @@ packages:
     dependencies:
       '@unocss/core': 0.49.0
     dev: true
+
+  /@unocss/preset-mini/0.49.1:
+    resolution: {integrity: sha512-U2cjE9YjA4ft4zPP4u34QNhCsgdNWf+Pvvw2lQ2tjzP55h1eGSH6lQxnhpESMpnmec3jwP3pK4+zbvnaMhNVlA==}
+    dependencies:
+      '@unocss/core': 0.49.1
+    dev: false
 
   /@unocss/preset-tagify/0.49.0:
     resolution: {integrity: sha512-5llKaLuHohh9yF9Q3fIP3ajWc6DUwmfeH3Lp1wToFuEH4XhwGw98pPErCGaPuTLSEqncFZ3TH8BQ+EbxEc/3TQ==}
