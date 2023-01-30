@@ -49,9 +49,9 @@ export const theme = {
   boxShadow: {
     xs: 'var(--un-shadow-inset) 0 1px 1px 0 var(--un-shadow-color, rgba(0,0,0,0.03))',
     switch:
-      'calc(var(--o-switch-offset) * -1) 0 0 2px var(--o-switch-bc) inset, 0 0 0 2px var(--o-switch-bc) inset;',
+      'calc(var(--ld-switch-offset) * -1) 0 0 2px var(--ld-switch-bc) inset, 0 0 0 2px var(--ld-switch-bc) inset;',
     switchActive:
-      'calc(var(--o-switch-offset)) 0 0 2px var(--o-switch-c) inset, 0 0 0 2px var(--o-switch-c) inset;',
+      'calc(var(--ld-switch-offset)) 0 0 2px var(--ld-switch-c) inset, 0 0 0 2px var(--ld-switch-c) inset;',
     trigger: '0px 4px 10px #0000001a',
     cardMD: '0px 0px 12px rgb(0 0 0 / 12%)',
     cardSM: '0px 0px 6px rgb(0 0 0 / 12%)',
