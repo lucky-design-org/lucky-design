@@ -14,7 +14,8 @@
       "types": "./dist/index.d.ts",
       "require": "./dist/lucky-design.umd.cjs",
       "import": "./dist/lucky-design.js"
-    }
+    },
+    "./dist/style.css": "./dist/style.css"
   },
   "main": "./dist/lucky-design.umd.cjs",
   "module": "./dist/lucky-design.js",
@@ -24,7 +25,7 @@
   ],
   "scripts": {
     "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build",
-    "dev": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
+    "dev": "esno ../../scripts/dev.ts"
   },
   "dependencies": {
     "@lucky-design/components": "workspace:*"

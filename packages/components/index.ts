@@ -1,4 +1,4 @@
 import 'uno.css'
 
-export * from './button'
-export * from './tree'
+export * from './src/button'
+export * from './src/tree'

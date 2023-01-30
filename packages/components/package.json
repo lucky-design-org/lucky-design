@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --skipLibCheck",
-    "dev": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
+    "dev": "esno ../../scripts/dev.ts"
   },
   "exports": {
     ".": {
