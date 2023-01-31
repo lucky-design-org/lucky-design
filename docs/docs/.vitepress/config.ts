@@ -3,12 +3,28 @@ import locales from './locales'
 
 export default defineConfig({
   title: 'lucky-design',
+  head: [['link', { rel: 'icon', href: '/icon.ico' }]],
+
+  // 默认主题
   appearance: 'dark',
+
+  // i18n
   locales: {
     'root': locales.en,
     'zh-CN': locales.zh,
   },
-  head: [['link', { rel: 'icon', href: '/icon.ico' }]],
+
+  // 从URL中删除尾随的.html
+  cleanUrls: true,
+
+  // 显示更新时间
+  lastUpdated: true,
+
+  markdown: {
+    theme: 'material-theme-palenight',
+    lineNumbers: true,
+  },
+
   themeConfig: {
     logo: '/icon.png',
 
@@ -29,21 +45,10 @@ export default defineConfig({
       copyright: 'Copyright © 2023-present Lucky-Design',
     },
 
-    editLink: {
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
-      text: 'Edit this page on GitHub',
-    },
-
     algolia: {
       appId: 'Z7DZ7S5F34',
       apiKey: 'f2fc637edfcc09751dcea9a8e26350f4',
       indexName: 'Lucky-design',
     },
-  },
-
-  lastUpdated: true,
-  markdown: {
-    theme: 'material-theme-palenight',
-    lineNumbers: true,
   },
 })
