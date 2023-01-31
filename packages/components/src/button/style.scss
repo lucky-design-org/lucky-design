@@ -1,3 +1,11 @@
 .ld-button {
-  @apply ld-blue bg-context text-white p2 cursor-pointer;
+  @apply ld-purple-600 bg-context text-white p2 cursor-pointer rounded-lg w-fit px-4;
+}
+
+.ld-button-small {
+  @apply ld-blue bg-context text-white p1 cursor-pointer rounded-lg w-fit px-4;
+}
+
+.ld-button-large {
+  @apply ld-blue bg-context text-white p4 cursor-pointer rounded-lg w-fit px-4;
 }

@@ -5,7 +5,7 @@ const props = defineProps(buttonProps)
 </script>
 
 <template>
-  <div class="ld-button">
-    {{ props.type }}
+  <div :class="props.size === 'small' ? 'ld-button-small' : 'ld-button'">
+    {{ props.text }}
   </div>
 </template>
