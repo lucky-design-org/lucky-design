@@ -4,6 +4,16 @@ export default {
   link: '/zh-CN/',
   description: '基于Vue3的高效美观的组件库',
   themeConfig: {
+    lastUpdatedText: '上次更新',
+    outlineTitle: '当前页面',
+    editLink: {
+      pattern: 'https://github.com/lucky-design-org/lucky-design/edit/master/docs/docs/:path',
+      text: '在github上编辑此页面',
+    },
+    docFooter: {
+      prev: '上一页',
+      next: '下一页',
+    },
     nav: [
       { text: '指南', link: '/zh-CN/guide/', activeMatch: '/zh-CN/guide' },
       {

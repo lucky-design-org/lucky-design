@@ -3,6 +3,16 @@ export default {
   lang: 'en-US',
   description: 'lightweight component library',
   themeConfig: {
+    lastUpdatedText: 'Last updated',
+    outlineTitle: 'On this page',
+    editLink: {
+      pattern: 'https://github.com/lucky-design-org/lucky-design/edit/master/docs/docs/:path',
+      text: 'Edit this page on GitHub',
+    },
+    docFooter: {
+      prev: 'Previous page',
+      next: 'Next page',
+    },
     nav: [
       { text: 'Guide', link: '/guide/', activeMatch: '/guide' },
       {
