@@ -6,14 +6,22 @@ export const buttonProps = {
    * @description: Button type
    */
   type: {
-    type: String as PropType<StatusType | 'default'>,
-    default: 'default',
+    type: String as PropType<StatusType | 'primary'>,
+    default: 'primary',
   },
 
   /**
    * @description: Button text
    */
   text: String,
+
+  /**
+   * @description: Button shape
+   */
+  shape: {
+    type: String as PropType<'round' | 'circle' | 'square'>,
+    default: 'square',
+  },
 
   /**
    * @description: Button disabled
