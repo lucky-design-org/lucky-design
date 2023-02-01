@@ -2,8 +2,8 @@
   "name": "@lucky-design/docs",
   "private": true,
   "scripts": {
-    "dev": "vitepress dev *",
-    "build": "vitepress build *"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs"
   },
   "dependencies": {
     "lucky-design": "workspace:*",
