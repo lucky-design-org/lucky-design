@@ -1,0 +1,16 @@
+{
+  "name": "@lucky-design/docs",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev .",
+    "build": "vitepress build ."
+  },
+  "dependencies": {
+    "lucky-design": "workspace:*",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0",
+    "vitepress": "1.0.0-alpha.45"
+  }
+}
