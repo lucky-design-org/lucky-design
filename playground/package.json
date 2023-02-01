@@ -9,8 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "lucky-design": "workspace:*",
     "vue": "^3.2.45",
-    "lucky-design": "workspace:*"
+    "vue-router": "4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",

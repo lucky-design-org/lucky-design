@@ -1,3 +1,40 @@
 .ld-button {
-  @apply ld-blue bg-context text-white p2 cursor-pointer;
+  @apply ld-primary bg-context text-white p2 cursor-pointer rounded w-fit px-4;
+}
+
+.sm {
+  @apply p1.5 px-2.5;
+  font-size: 12px
+}
+
+.lg {
+  @apply p4 px-6;
+}
+
+.circle {
+  @apply rounded-full;
+}
+
+.round {
+  @apply rounded-lg;
+}
+
+.disabled {
+  @apply cursor-not-allowed opacity-50;
+}
+
+.success {
+  @apply ld-success;
+}
+
+.warning {
+  @apply ld-warning;
+}
+
+.error {
+  @apply ld-error;
+}
+
+.info {
+  @apply ld-info;
 }

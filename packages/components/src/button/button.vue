@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { buttonProps } from './props'
 
-const props = defineProps(buttonProps)
+const { type, size, disabled, text, shape } = defineProps(buttonProps)
 </script>
 
 <template>
-  <div class="ld-button">
-    {{ props.type }}
+  <div class="ld-button" :class="[size, !disabled || 'disabled', type, shape]">
+    {{ text }}
   </div>
 </template>
