@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import { LButton } from 'lucky-design'
 </script>
 
@@ -19,4 +19,4 @@ import { LButton } from 'lucky-design'
   height: 100%;
   padding: 20px;
 }
-</style>
+</style> -->
