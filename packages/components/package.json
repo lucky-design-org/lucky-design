@@ -28,7 +28,9 @@
   "license": "MIT",
   "dependencies": {
     "@lucky-design/common": "workspace:*",
-    "@lucky-design/preset": "workspace:*"
+    "@lucky-design/preset": "workspace:*",
+    "@vueuse/core": "^9.12.0",
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
     "unplugin-auto-import": "^0.12.1"
