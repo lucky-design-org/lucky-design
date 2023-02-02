@@ -1,6 +1,10 @@
-import type { Plugin } from 'vue'
+import type { AppContext, Plugin } from 'vue'
 
 export type SFCWithInstall<T> = T & Plugin
+
+export type SFCInstallWithContext<T> = SFCWithInstall<T> & {
+  _context: AppContext | null
+}
 
 export type SizeType = 'xs' | 'sm' | 'md' | 'lg'
 export type DirectionType = 'top' | 'right' | 'bottom' | 'left'
