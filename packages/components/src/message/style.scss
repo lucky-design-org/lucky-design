@@ -5,7 +5,7 @@
   @apply bg-white top-20px left-50% px-3 py-2 rd-1 text-gray-5 flex transition-all-300 fixed;
 
   .message-content {
-    @apply flex-shrink-0;
+    @apply flex-shrink-0 break-words;
   }
 
   .close-btn {
