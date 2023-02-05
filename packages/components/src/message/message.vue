@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { noop, useResizeObserver, useTimeoutFn } from '@vueuse/core'
 import { getLastOffset } from './manager'
+import type { MessageType } from './types'
 
 const props = withDefaults(defineProps<{
   message: string
@@ -8,7 +9,7 @@ const props = withDefaults(defineProps<{
   id: string
   offset: number
   closeBtn: boolean
-  type: 'info' | 'success' | 'warning' | 'error'
+  type: MessageType
 }>(), {
   type: 'info',
   timeout: 3000,

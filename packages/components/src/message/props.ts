@@ -1,5 +1,7 @@
+import type { MessageType } from './types'
+
 export interface LMessageProps {
-  type?: 'info' | 'success' | 'warning' | 'error'
+  type?: MessageType
   message: string
   timeout?: number
   offset?: number
