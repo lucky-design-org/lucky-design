@@ -19,15 +19,15 @@ $iconTypes: (
   @apply bg-white top-20px left-50% px-3 py-2 rd-1 text-gray-5 flex items-center transition-all-300 fixed;
 
   .message-content {
-    @apply flex-shrink-0 break-words;
+    overflow-wrap: anywhere;
   }
 
   .close-btn {
-    @apply text-sm text-gray hover:text-dark ml-2 cursor-pointer transition-all-300;
+    @apply text-sm text-gray hover:text-dark ml-2 cursor-pointer transition-all-300 flex-shrink-0;
   }
 
   .message-icon {
-    @apply text-lg mr-2;
+    @apply text-lg mr-2 flex-shrink-0;
   }
 
   @each $type, $color in $iconTypes {
