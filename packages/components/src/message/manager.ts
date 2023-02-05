@@ -1,5 +1,5 @@
 import { render } from 'vue'
-import type { MessageInstance } from './types'
+import type { MessageInstance, MessageType } from './types'
 import Message from './message.vue'
 import type { LMessageProps } from './props'
 
@@ -60,4 +60,21 @@ export const getLastOffset = (id: string): number => {
   if (!target)
     return 0
   return target.component.exposed!.bottom.value
+}
+
+export function createSubHandler(type: MessageType) {
+  return function (message: any, options: LMessageProps) {
+    return createMessage({
+      ...options,
+      type,
+      message,
+    })
+  }
+}
+
+export function closeAll() {
+  for (const instance of instances)
+    instance.close()
+
+  instances.splice(0, instances.length)
 }

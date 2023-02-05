@@ -1,5 +1,7 @@
+import type { MessageType } from './types'
+
 export interface LMessageProps {
-  // TODO icon and different types support
+  type?: MessageType
   message: string
   timeout?: number
   offset?: number

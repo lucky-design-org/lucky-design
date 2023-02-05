@@ -1,11 +1,12 @@
 import path from 'node:path'
 import { resolve } from 'path'
+import fs from 'fs'
 import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import VueJSX from '@vitejs/plugin-vue-jsx'
 import Unocss from 'unocss/vite'
-import fs from 'fs-extra'
+import fsExtra from 'fs-extra'
 
 let config
 
@@ -48,10 +49,12 @@ export default defineConfig({
         const { root, build } = config
         const { outDir } = build
         const styleFile = resolve(root, outDir, 'style.css')
-        await fs.copyFile(
-          styleFile,
-          resolve(__dirname, '../lucky-design/src/style.css'),
-        )
+        if (fs.existsSync(styleFile)) {
+          await fsExtra.copyFile(
+            styleFile,
+            resolve(__dirname, '../lucky-design/src/style.css'),
+          )
+        }
       },
     },
   ],

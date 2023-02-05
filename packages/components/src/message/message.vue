@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { noop, useResizeObserver, useTimeoutFn } from '@vueuse/core'
 import { getLastOffset } from './manager'
+import type { MessageType } from './types'
 
 const props = withDefaults(defineProps<{
   message: string
@@ -8,7 +9,9 @@ const props = withDefaults(defineProps<{
   id: string
   offset: number
   closeBtn: boolean
+  type: MessageType
 }>(), {
+  type: 'info',
   timeout: 3000,
   offset: 20,
   closeBtn: false,
@@ -45,7 +48,8 @@ defineExpose({ bottom, lastOffset, visible })
 
 <template>
   <Transition name="ld-message-fade" @after-leave="$emit('destroy')">
-    <div v-show="visible" :id="id" ref="elRef" class="ld-message" :style="{ top: `${lastOffset}px` }" @mouseenter="clearTimer" @mouseleave="startTimer">
+    <div v-show="visible" :id="id" ref="elRef" class="ld-message" :class="[`is-${type}`]" :style="{ top: `${lastOffset}px` }" @mouseenter="clearTimer" @mouseleave="startTimer">
+      <i class="message-icon" />
       <div class="message-content">
         {{ message }}
       </div>
