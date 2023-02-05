@@ -1,5 +1,5 @@
 export interface LMessageProps {
-  // TODO icon and different types support
+  type?: 'info' | 'success' | 'warning' | 'error'
   message: string
   timeout?: number
   offset?: number
