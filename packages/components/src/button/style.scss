@@ -1,5 +1,10 @@
 .ld-button {
-  @apply ld-primary bg-context text-white p2 cursor-pointer rounded w-fit px-4;
+  @apply ld-primary bg-context text-white p2 cursor-pointer rounded w-fit px-3;
+}
+
+.xs {
+  @apply p1 px-2;
+  font-size: 10px
 }
 
 .sm {
@@ -8,7 +13,8 @@
 }
 
 .lg {
-  @apply p4 px-6;
+  @apply p3 px-4;
+  font-size: 16px
 }
 
 .circle {

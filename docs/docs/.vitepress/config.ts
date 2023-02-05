@@ -21,7 +21,10 @@ export default defineConfig({
   lastUpdated: true,
 
   markdown: {
-    theme: 'material-theme-palenight',
+    theme: {
+      light: 'min-dark',
+      dark: 'one-dark-pro',
+    },
     lineNumbers: true,
   },
 

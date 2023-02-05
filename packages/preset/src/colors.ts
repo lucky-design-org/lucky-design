@@ -287,19 +287,25 @@ export const darkTheme = {
   '--ld-colors-foreground': 'var(--ld-colors-white)',
   '--ld-colors-backgroundContrast': 'var(--ld-colors-gray50)',
 
-  '--ld-theme-primary': 'var(--ld-colors-blue600)',
-  '--ld-theme-primaryHsl': `${hex2rgba('#0072F5')}`,
-  '--ld-theme-primaryLightHover': 'var(--ld-colors-blue500)',
-  '--ld-theme-primaryLightActive': 'var(--ld-colors-blue700)',
-  '--ld-theme-primaryBorderHover': 'var(--ld-colors-blue500)',
-  '--ld-theme-primaryBorderActive': 'var(--ld-colors-blue700)',
+  '--ld-theme-primary': 'var(--ld-colors-purple500)',
+  '--ld-theme-primaryHsl': `${hex2rgba('#A855F7')}`,
+  '--ld-theme-primaryLight': 'var(--ld-colors-purple200)',
+  '--ld-theme-primaryLightHover': 'var(--ld-colors-purple400)',
+  '--ld-theme-primaryLightActive': 'var(--ld-colors-purple600)',
+  '--ld-theme-primaryBorder': 'var(--ld-colors-purple500)',
+  '--ld-theme-primaryBorderHover': 'var(--ld-colors-purple400)',
+  '--ld-theme-primaryBorderActive': 'var(--ld-colors-purple600)',
+  '--ld-theme-primaryShadow': 'var(--ld-colors-purple500)',
 
-  '--ld-theme-secondary': 'var(--ld-colors-purple700)',
-  '--ld-theme-secondaryHsl': `${hex2rgba('#9750DD')}`,
-  '--ld-theme-secondaryLightHover': 'var(--ld-colors-purple600)',
-  '--ld-theme-secondaryLightActive': 'var(--ld-colors-purple800)',
-  '--ld-theme-secondaryBorderHover': 'var(--ld-colors-purple600)',
-  '--ld-theme-secondaryBorderActive': 'var(--ld-colors-purple800)',
+  '--ld-theme-secondary': 'var(--ld-colors-blue500)',
+  '--ld-theme-secondaryHsl': `${hex2rgba('#409EFF')}`,
+  '--ld-theme-secondaryLight': 'var(--ld-colors-blue200)',
+  '--ld-theme-secondaryLightHover': 'var(--ld-colors-blue500)',
+  '--ld-theme-secondaryLightActive': 'var(--ld-colors-blue700)',
+  '--ld-theme-secondaryBorder': 'var(--ld-colors-blue600)',
+  '--ld-theme-secondaryBorderHover': 'var(--ld-colors-blue500)',
+  '--ld-theme-secondaryBorderActive': 'var(--ld-colors-blue700)',
+  '--ld-theme-secondaryShadow': 'var(--ld-colors-blue500)',
 
   '--ld-theme-success': 'var(--ld-colors-green600)',
 
@@ -313,7 +319,6 @@ export const darkTheme = {
   '--ld-theme-infoLightActive': 'var(--ld-colors-gray800)',
   '--ld-theme-infoBorderHover': 'var(--ld-colors-gray600)',
   '--ld-theme-infoBorderActive': 'var(--ld-colors-gray800)',
-
 }
 
 export const getCSSPreflights = (theme: any) => {
