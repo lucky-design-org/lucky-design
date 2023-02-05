@@ -1,10 +1,10 @@
 # Button
 
 <script setup>
-import Basic from '../../examples/button/basic.vue'
-import Size from '../../examples/button/size.vue'
-import Shape from '../../examples/button/shape.vue'
-import Disabled from '../../examples/button/disabled.vue'
+// import Basic from '../../examples/button/basic.vue'
+// import Size from '../../examples/button/size.vue'
+// import Shape from '../../examples/button/shape.vue'
+// import Disabled from '../../examples/button/disabled.vue'
 </script>
 
 常用的按钮操作
