@@ -1,4 +1,4 @@
-import { render } from 'vue'
+import { h, render, shallowReactive } from 'vue'
 import type { MessageInstance, MessageType } from './types'
 import Message from './message.vue'
 import type { LMessageProps } from './props'
@@ -10,15 +10,19 @@ export function createMessage(props: LMessageProps) {
   const el = document.createElement('div')
   const id = `lucky-message-${currId}`
 
-  const vnode = h(Message, {
-    ...props,
-    id,
-    onDestroy: () => {
-      // 移除DOM
-      removeMessageById(id)
-      render(null, el)
+  const vnode = h(
+    Message,
+    {
+      ...props,
+      id,
+      onDestroy: () => {
+        // 移除DOM
+        removeMessageById(id)
+        render(null, el)
+      },
     },
-  }, () => props.message)
+    () => props.message,
+  )
   render(vnode, el)
   document.body.appendChild(el.firstElementChild!)
 
@@ -73,8 +77,7 @@ export function createSubHandler(type: MessageType) {
 }
 
 export function closeAll() {
-  for (const instance of instances)
-    instance.close()
+  for (const instance of instances) instance.close()
 
   instances.splice(0, instances.length)
 }

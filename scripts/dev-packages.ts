@@ -2,7 +2,7 @@ import path from 'node:path'
 import * as process from 'process'
 import chokidar from 'chokidar'
 import { debounce } from 'perfect-debounce'
-import { logger, run } from './utils'
+import { isMac, logger, run } from './utils'
 
 async function rebuildLuckyDesign() {
   const luckyDesign = path.resolve(process.cwd(), 'packages/components')
@@ -12,7 +12,10 @@ async function rebuildLuckyDesign() {
   })
 
   const build = async () => {
-    await run('pnpm run', ['--filter', './packages/lucky-design', 'build'])
+    if (isMac)
+      await run('pnpm', ['--filter', './packages/lucky-design', 'build'])
+    else
+      await run('pnpm run', ['--filter', './packages/lucky-design', 'build'])
   }
 
   const debounceBuilder = debounce(async () => build(), 500)
@@ -24,7 +27,11 @@ async function rebuildLuckyDesign() {
 
 async function devPackages() {
   try {
-    await run('pnpm run', ['--filter', './packages/*', '--parallel', 'dev'])
+    if (isMac)
+      await run('pnpm', ['--filter', './packages/*', '--parallel', 'dev'])
+    else
+      await run('pnpm run', ['--filter', './packages/*', '--parallel', 'dev'])
+
     await rebuildLuckyDesign()
     logger.success('All packages are running in dev mode.')
   }
