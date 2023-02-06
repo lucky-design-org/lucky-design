@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "esno scripts/dev-packages.ts",
     "build": "esno scripts/build.ts",
-    "dev:docs": "cd docs && npm run dev",
-    "dev:playground": "cd playground && npm run dev",
+    "dev:docs": "cd docs && pnpm run dev",
+    "dev:playground": "cd playground && pnpm run dev",
     "prepare": "husky install",
     "lint": "eslint --fix --ext .js,.ts,.tsx,.vue .",
     "test": "vitest run",

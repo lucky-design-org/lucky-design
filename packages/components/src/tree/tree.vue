@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import TestTreeNode from './TestTreeNode.vue'
 </script>
 
 <template>
-  <div />
+  <TestTreeNode />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

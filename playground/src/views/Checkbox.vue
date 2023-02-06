@@ -8,10 +8,18 @@ const handleInput = (value: boolean) => {
 <template>
   <div>
     <div class="container">
-      <LCheckbox :value="true" @input="handleInput"> 北京 </LCheckbox>
-      <LCheckbox :value="false" :disabled="true"> 上海 </LCheckbox>
-      <LCheckbox :true-value="true"> 广州 </LCheckbox>
-      <LCheckbox :false-value="false"> 杭州 </LCheckbox>
+      <LCheckbox :value="true" @input="handleInput">
+        北京
+      </LCheckbox>
+      <LCheckbox :value="false" :disabled="true">
+        上海
+      </LCheckbox>
+      <LCheckbox :true-value="true">
+        广州
+      </LCheckbox>
+      <LCheckbox :false-value="false">
+        杭州
+      </LCheckbox>
     </div>
   </div>
 </template>
