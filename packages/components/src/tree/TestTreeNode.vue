@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { LTree } from 'lucky-design'
+import TreeNode from './TreeNode.vue'
 const dataList = reactive([
   {
     label: 'Level one 1',
@@ -64,13 +64,12 @@ const dataList = reactive([
 
 <template>
   <div>
-    <!-- <TreeNode
+    <TreeNode
       v-for="(item, index) in dataList"
       :key="index"
       :data="item"
       :show-checkbox="true"
-    ></TreeNode> -->
-    <LTree />
+    />
   </div>
 </template>
 

@@ -1,5 +1,16 @@
 import type { ExtractPropTypes } from 'vue'
 
-export const treeProps = {}
+export const treeNodeProps = {
+  data: {
+    type: Object,
+    default() {
+      return {}
+    },
+  },
+  showCheckbox: {
+    type: Boolean,
+    default: false,
+  },
+}
 
-export type TreeProps = ExtractPropTypes<typeof treeProps>
+export type TreeNodeProps = ExtractPropTypes<typeof treeNodeProps>
