@@ -16,3 +16,5 @@ export const logger = {
     console.log(pc.bgRed(msg))
   },
 }
+
+export const isMac = process.platform !== 'win32'

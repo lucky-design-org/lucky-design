@@ -1,27 +1,15 @@
-import { logger, run } from './utils'
+import { isMac, logger, run } from './utils'
 
 async function build() {
   try {
-    switch (process.platform) {
-      case 'darwin':
-        // console.log('[ mac ] >')
-        await run('pnpm', ['--filter', './packages/*', '--parallel', 'build'])
-        break
-      case 'win32':
-        // console.log('[ windows ] >')
-        await run('pnpm run', [
-          '--filter',
-          './packages/*',
-          '--parallel',
-          'build',
-        ])
-        break
-      default:
-        break
-    }
+    if (isMac)
+      await run('pnpm', ['--filter', './packages/*', '--parallel', 'build'])
+    else
+      await run('pnpm run', ['--filter', './packages/*', '--parallel', 'build'])
 
     logger.success('All builds completed successfully')
-  } catch (err) {
+  }
+  catch (err) {
     logger.error((err as Error).toString())
   }
 }
