@@ -1,21 +1,24 @@
 <script lang="ts" setup>
 import { noop, useResizeObserver, useTimeoutFn } from '@vueuse/core'
+import { computed, onMounted, ref } from 'vue'
 import { getLastOffset } from './manager'
 import type { MessageType } from './types'
-
-const props = withDefaults(defineProps<{
-  message: string
-  timeout: number
-  id: string
-  offset: number
-  closeBtn: boolean
-  type: MessageType
-}>(), {
-  type: 'info',
-  timeout: 3000,
-  offset: 20,
-  closeBtn: false,
-})
+const props = withDefaults(
+  defineProps<{
+    message: string
+    timeout: number
+    id: string
+    offset: number
+    closeBtn: boolean
+    type: MessageType
+  }>(),
+  {
+    type: 'info',
+    timeout: 3000,
+    offset: 20,
+    closeBtn: false,
+  },
+)
 defineEmits(['destroy'])
 
 const visible = ref(false)
@@ -26,7 +29,7 @@ let clearTimer = noop
 function startTimer() {
   if (props.timeout === 0)
     return
-  ({ stop: clearTimer } = useTimeoutFn(() => {
+  ;({ stop: clearTimer } = useTimeoutFn(() => {
     visible.value = false
     clearTimer = noop
   }, props.timeout))
@@ -48,7 +51,16 @@ defineExpose({ bottom, lastOffset, visible })
 
 <template>
   <Transition name="ld-message-fade" @after-leave="$emit('destroy')">
-    <div v-show="visible" :id="id" ref="elRef" class="ld-message" :class="[`is-${type}`]" :style="{ top: `${lastOffset}px` }" @mouseenter="clearTimer" @mouseleave="startTimer">
+    <div
+      v-show="visible"
+      :id="id"
+      ref="elRef"
+      class="ld-message"
+      :class="[`is-${type}`]"
+      :style="{ top: `${lastOffset}px` }"
+      @mouseenter="clearTimer"
+      @mouseleave="startTimer"
+    >
       <i class="message-icon" />
       <div class="message-content">
         {{ message }}
