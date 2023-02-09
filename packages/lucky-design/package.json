@@ -1,11 +1,14 @@
 {
   "name": "lucky-design",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "A Component Library for Vue 3",
   "license": "MIT",
   "keywords": [
     "lucky-design",
+    "components",
     "unocss",
+    "vue",
     "vueuse"
   ],
   "sideEffects": false,
@@ -23,6 +26,14 @@
   "files": [
     "dist"
   ],
+  "bugs": {
+    "url": "https://github.com/lucky-design-org/lucky-design/issues"
+  },
+  "homepage": "https://lucky-design.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucky-design-org/lucky-design.git"
+  },
   "scripts": {
     "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build",
     "dev": "esno ../../scripts/dev.ts"

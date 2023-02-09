@@ -14,7 +14,10 @@
     "test": "vitest run",
     "test:cover": "vitest run --coverage",
     "test:dev": "vitest dev",
-    "typecheck": "tsc --noEmit && vue-tsc --noEmit"
+    "typecheck": "tsc --noEmit && vue-tsc --noEmit",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "publish": "changeset publish --registry=https://registry.npmjs.com/"
   },
   "lint-staged": {
     "packages/**": [
@@ -36,6 +39,7 @@
   },
   "homepage": "https://github.com/ByteDanceYouthTrainCamp/lucky-design#readme",
   "dependencies": {
+    "@changesets/cli": "^2.26.0",
     "lucky-design": "workspace:*",
     "vue": "^3.2.45"
   },
