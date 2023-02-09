@@ -17,7 +17,7 @@
     "typecheck": "tsc --noEmit && vue-tsc --noEmit",
     "changeset": "changeset",
     "version": "changeset version",
-    "publish": "changeset version"
+    "publish": "changeset publish"
   },
   "lint-staged": {
     "packages/**": [
