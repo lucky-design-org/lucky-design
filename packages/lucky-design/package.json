@@ -39,7 +39,9 @@
     "dev": "esno ../../scripts/dev.ts"
   },
   "dependencies": {
-    "@lucky-design/components": "workspace:*"
+    "@lucky-design/components": "workspace:*",
+    "@lucky-design/preset": "workspace:*",
+    "@lucky-design/common": "workspace:*"
   },
   "publishConfig": {
     "access": "public"

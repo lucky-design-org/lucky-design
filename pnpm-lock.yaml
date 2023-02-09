@@ -104,9 +104,13 @@ importers:
 
   packages/lucky-design:
     specifiers:
+      '@lucky-design/common': workspace:*
       '@lucky-design/components': workspace:*
+      '@lucky-design/preset': workspace:*
     dependencies:
+      '@lucky-design/common': link:../common
       '@lucky-design/components': link:../components
+      '@lucky-design/preset': link:../preset
 
   packages/preset:
     specifiers:
