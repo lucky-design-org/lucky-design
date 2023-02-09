@@ -14,7 +14,10 @@
     "test": "vitest run",
     "test:cover": "vitest run --coverage",
     "test:dev": "vitest dev",
-    "typecheck": "tsc --noEmit && vue-tsc --noEmit"
+    "typecheck": "tsc --noEmit && vue-tsc --noEmit",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "publish": "changeset version"
   },
   "lint-staged": {
     "packages/**": [
@@ -41,6 +44,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.34.1",
+    "@changesets/cli": "^2.26.0",
     "@commitlint/config-conventional": "^17.4.2",
     "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
