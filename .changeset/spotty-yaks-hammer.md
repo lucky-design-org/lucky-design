@@ -1,0 +1,3 @@
+---
+'lucky-design': major
+---

@@ -69,12 +69,10 @@ importers:
 
   docs:
     specifiers:
-      lucky-design: npm:lucky-design@latest
       vite: ^4.0.0
       vitepress: 1.0.0-alpha.45
       vue: ^3.2.45
     dependencies:
-      lucky-design: link:../packages/lucky-design
       vue: 3.2.45
     devDependencies:
       vite: 4.0.4
@@ -1967,7 +1965,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.0.4_ovmyjmuuyckt3r3gpaexj2onji
+      vite: 4.0.4
       vue: 3.2.45
     dev: true
 

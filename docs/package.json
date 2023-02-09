@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "vue": "^3.2.45",
-    "lucky-design": "npm:lucky-design@latest"
+    "lucky-design": "lucky-design@latest"
   },
   "devDependencies": {
     "vite": "^4.0.0",
