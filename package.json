@@ -1,5 +1,5 @@
 {
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "packageManager": "pnpm@7.5.2",
   "description": "",
@@ -15,9 +15,7 @@
     "test:cover": "vitest run --coverage",
     "test:dev": "vitest dev",
     "typecheck": "tsc --noEmit && vue-tsc --noEmit",
-    "changeset": "changeset",
-    "version": "changeset version",
-    "publish": "changeset publish"
+    "release": "bumpp package.json packages/**/package.json"
   },
   "lint-staged": {
     "packages/**": [
@@ -44,13 +42,13 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.34.1",
-    "@changesets/cli": "^2.26.0",
     "@commitlint/config-conventional": "^17.4.2",
     "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "@typescript-eslint/parser": "^5.48.2",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "bumpp": "^8.2.1",
     "chokidar": "^3.5.3",
     "commitlint": "^17.4.2",
     "eslint": "8.31.0",
