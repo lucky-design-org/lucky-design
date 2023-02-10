@@ -39,8 +39,7 @@ const handleExpand = () => {
         <span
           class="tree-title"
           :class="{ titleactive: active || data.selected }"
-          >{{ data.label }}</span
-        >
+        >{{ data.label }}</span>
       </div>
       <!-- 踩坑：组件递归需要和文件名一致 -->
       <div v-show="data.expand">
