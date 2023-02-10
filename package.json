@@ -1,5 +1,5 @@
 {
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "packageManager": "pnpm@7.5.2",
   "description": "",
@@ -14,7 +14,8 @@
     "test": "vitest run",
     "test:cover": "vitest run --coverage",
     "test:dev": "vitest dev",
-    "typecheck": "tsc --noEmit && vue-tsc --noEmit"
+    "typecheck": "tsc --noEmit && vue-tsc --noEmit",
+    "release": "bumpp package.json packages/**/package.json"
   },
   "lint-staged": {
     "packages/**": [
@@ -47,6 +48,7 @@
     "@typescript-eslint/parser": "^5.48.2",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "bumpp": "^8.2.1",
     "chokidar": "^3.5.3",
     "commitlint": "^17.4.2",
     "eslint": "8.31.0",
