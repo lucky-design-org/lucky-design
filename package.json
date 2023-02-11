@@ -5,6 +5,7 @@
   "description": "",
   "private": true,
   "scripts": {
+    "gen": "bash ./scripts/add-component.sh",
     "dev": "esno scripts/dev-packages.ts",
     "build": "esno scripts/build.ts",
     "dev:docs": "cd docs && pnpm run dev",
