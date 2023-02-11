@@ -20,6 +20,13 @@ export const drawerProps = {
     type: Boolean,
     default: false,
   },
+  /**
+   * @description: close the drawer
+   */
+  close: {
+    type: Function as PropType<() => void>,
+    default: () => {},
+  },
 }
 
 export type LDrawerProps = ExtractPropTypes<typeof drawerProps>

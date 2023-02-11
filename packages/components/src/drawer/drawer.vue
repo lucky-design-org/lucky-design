@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import { drawerProps } from './props'
 
-const { title, direction, visible } = defineProps(drawerProps)
+const { title, direction, visible, close } = defineProps(drawerProps)
 </script>
 
 <template>
   <div :class="visible || 'mask'" />
-  <div v-show="!visible" class="ld-drawer" :class="[direction]">
+  <div v-show="!visible" class="ld-drawer" :class="direction">
     <div class="header">
-      <slot />
-      <div class="close">
-        X
+      {{ title }}
+      <div class="close" @click="close">
+        ×
       </div>
     </div>
-    {{ title }}
+    <slot />
   </div>
 </template>
