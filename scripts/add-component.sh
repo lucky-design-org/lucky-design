@@ -89,15 +89,14 @@ cat > docs/docs/zh-CN/components/$INPUT_NAME.md <<EOF
 # $INPUT_NAME
 EOF
 
-cat > playground/src/views//$INPUT_NAME.md <<EOF
-# $INPUT_NAME
+cat > playground/src/views//$INPUT_NAME.vue <<EOF
 <script setup lang="ts">
-import { L$INPUT_NAME } from 'lucky-design'
+import { L$NAME } from 'lucky-design'
 </script>
 
 <template>
   <div class="container">
-    <L$INPUT_NAME />
+    <L$NAME />
   </div>
 </template>
 
@@ -111,5 +110,4 @@ import { L$INPUT_NAME } from 'lucky-design'
   height: 100%;
 }
 </style>
-
 EOF
