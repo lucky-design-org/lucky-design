@@ -1,0 +1,6 @@
+.ld-upload {
+  @apply cursor-pointer flex-inline justify-center items-center;
+  .ld-upload_input {
+    @apply hidden;
+  }
+}
