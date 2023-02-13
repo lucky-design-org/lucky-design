@@ -1,8 +1,9 @@
-import { LButton, LDrawer, LMessage, LTree } from '@lucky-design/components'
-
-export const plugins = [
+import {
   LButton,
-  LTree,
-  LMessage,
   LDrawer,
-] as const
+  LMessage,
+  LTree,
+  LUpload,
+} from '@lucky-design/components'
+
+export const plugins = [LButton, LTree, LMessage, LDrawer, LUpload] as const
