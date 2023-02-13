@@ -11,7 +11,7 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/lucky-design/src/index.d.ts",
       "require": "./dist/lucky-design.umd.cjs",
       "import": "./dist/lucky-design.js"
     },
@@ -19,7 +19,7 @@
   },
   "main": "./dist/lucky-design.umd.cjs",
   "module": "./dist/lucky-design.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/lucky-design/src/index.d.ts",
   "files": [
     "dist"
   ],
