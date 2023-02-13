@@ -1,77 +1,140 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { LTree } from 'lucky-design'
-const dataList = reactive([
-  {
-    label: 'Level one 1',
-    expand: true,
-    children: [
-      {
-        label: 'Level two 1-1',
-        expand: true,
-        children: [
-          {
-            label: 'Level three 1-1-1',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    label: 'Level one 2',
-    children: [
-      {
-        label: 'Level two 2-1',
-        children: [
-          {
-            label: 'Level three 2-1-1',
-          },
-        ],
-      },
-      {
-        label: 'Level two 2-2',
-        children: [
-          {
-            label: 'Level three 2-2-1',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    label: 'Level one 3',
-    children: [
-      {
-        label: 'Level two 3-1',
-        children: [
-          {
-            label: 'Level three 3-1-1',
-          },
-        ],
-      },
-      {
-        label: 'Level two 3-2',
-        children: [
-          {
-            label: 'Level three 3-2-1',
-          },
-        ],
-      },
-    ],
-  },
-])
+const state = reactive({
+  treeOptions: [
+    {
+      label: '一级',
+      value: '',
+      children: [
+        {
+          label: '一级1',
+          value: '',
+        },
+        {
+          label: '一级2',
+          value: '',
+        },
+        {
+          label: '一级3',
+          value: '',
+          children: [
+            {
+              label: '一级3-1',
+              value: '',
+            },
+            {
+              label: '一级3-2',
+              value: '',
+              children: [
+                {
+                  label: '一级3-2-1',
+                  value: '',
+                },
+                {
+                  label: '一级3-2-2',
+                  value: '',
+                },
+                {
+                  label: '一级3-2-3',
+                  value: '',
+                },
+              ],
+            },
+            {
+              label: '一级3-3',
+              value: '',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      label: '二级',
+      value: '',
+      children: [
+        {
+          label: '二级1',
+          value: '',
+        },
+        {
+          label: '二级2',
+          value: '',
+        },
+        {
+          label: '二级3',
+          value: '',
+          children: [
+            {
+              label: '二级3-1',
+              value: '',
+              children: [
+                {
+                  label: '二级3-1-1',
+                  value: '',
+                },
+                {
+                  label: '二级3-1-2',
+                  value: '',
+                },
+                {
+                  label: '二级3-1-3',
+                  value: '',
+                },
+              ],
+            },
+            {
+              label: '二级3-2',
+              value: '',
+            },
+            {
+              label: '二级3-3',
+              value: '',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      label: '三级',
+      value: '',
+      children: [
+        {
+          label: '三级1',
+          value: '',
+        },
+        {
+          label: '三级2',
+          value: '',
+        },
+        {
+          label: '三级3',
+          value: '',
+          children: [
+            {
+              label: '三级3-1',
+              value: '',
+            },
+            {
+              label: '三级3-2',
+              value: '',
+            },
+            {
+              label: '三级3-3',
+              value: '',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+})
+const { treeOptions } = state
 </script>
 
 <template>
   <div>
-    <!-- <TreeNode
-      v-for="(item, index) in dataList"
-      :key="index"
-      :data="item"
-      :show-checkbox="true"
-    ></TreeNode> -->
-    <LTree />
+    <LTree :options="treeOptions" />
+    <!-- <LTree :options="treeOptions" multiple :defaultOpenNodes="['0']"></LTree> -->
   </div>
 </template>
-
-<style scoped></style>
