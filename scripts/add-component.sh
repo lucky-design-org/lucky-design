@@ -30,7 +30,7 @@ mkdir -p "$DIRNAME"
 mkdir -p "$DIRNAME/__tests__"
 
 cat > $DIRNAME/style.scss <<EOF
-.ld-$INPUT_NAME {
+.ld-$NAME {
 
 }
 EOF
@@ -87,4 +87,27 @@ EOF
 
 cat > docs/docs/zh-CN/components/$INPUT_NAME.md <<EOF
 # $INPUT_NAME
+EOF
+
+cat > playground/src/views//$INPUT_NAME.vue <<EOF
+<script setup lang="ts">
+import { L$NAME } from 'lucky-design'
+</script>
+
+<template>
+  <div class="container">
+    <L$NAME />
+  </div>
+</template>
+
+<style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+}
+</style>
 EOF
