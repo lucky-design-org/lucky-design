@@ -6,6 +6,7 @@ declare module 'lucky-design' {
     LMessage,
     LTree,
     LBacktop,
+    LUpload,
   } from 'lucky-design'
-  export { LButton, LCheckbox, LDrawer, LMessage, LTree, LBacktop }
+  export { LButton, LCheckbox, LDrawer, LMessage, LTree, LBacktop, LUpload }
 }
