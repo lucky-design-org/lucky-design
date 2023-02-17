@@ -1,7 +1,9 @@
 name: Release
 
 on:
-  pull_request:
+  release:
+    types:
+      - [created]
     branches:
       - 'master'
     tags:
