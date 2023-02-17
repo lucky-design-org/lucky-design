@@ -111,3 +111,7 @@ import { L$NAME } from 'lucky-design'
 }
 </style>
 EOF
+
+echo >> packages/components/index.ts "export * from './src/$INPUT_NAME'"
+
+echo "Component $INPUT_NAME created successfully"
