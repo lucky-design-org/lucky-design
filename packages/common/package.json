@@ -1,6 +1,6 @@
 {
   "name": "@lucky-design/common",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "lucky-design common library",
   "license": "MIT",
   "sideEffects": false,
