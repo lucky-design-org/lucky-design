@@ -1,6 +1,6 @@
 {
   "name": "@lucky-design/preset",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "lucky-design preset library",
   "license": "MIT",
   "sideEffects": false,
