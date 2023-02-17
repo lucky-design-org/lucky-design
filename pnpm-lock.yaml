@@ -69,7 +69,7 @@ importers:
 
   docs:
     specifiers:
-      lucky-design: workspace:*
+      lucky-design: 0.0.4
       vite: ^4.0.0
       vitepress: 1.0.0-alpha.45
       vue: ^3.2.45

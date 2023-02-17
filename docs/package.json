@@ -6,7 +6,7 @@
     "build": "vitepress build docs"
   },
   "dependencies": {
-    "lucky-design": "workspace:*",
+    "lucky-design": "npm:lucky-design@latest",
     "vue": "^3.2.45"
   },
   "devDependencies": {

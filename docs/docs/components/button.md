@@ -1,10 +1,10 @@
 # Button
 
 <script setup>
-// import Basic from '../examples/button/basic.vue'
-// import Size from '../examples/button/size.vue'
-// import Shape from '../examples/button/shape.vue'
-// import Disabled from '../examples/button/disabled.vue'
+import Basic from '../examples/button/basic.vue'
+import Size from '../examples/button/size.vue'
+import Shape from '../examples/button/shape.vue'
+import Disabled from '../examples/button/disabled.vue'
 </script>
 
 Commonly used button
@@ -18,7 +18,6 @@ Commonly used button
 :::
 
 ::: details code
-
 ```vue
 <script setup lang="ts">
 import { LButton } from 'lucky-design'
@@ -34,7 +33,6 @@ import { LButton } from 'lucky-design'
   </div>
 </template>
 ```
-
 :::
 
 ## Button size

@@ -1,13 +1,13 @@
 <script setup lang="ts">
-// import { LButton } from 'lucky-design'
+import { LButton } from 'lucky-design'
 </script>
 
 <template>
   <div class="container">
-    <!-- <LButton type="primary" text="primary" size="xs" />
+    <LButton type="primary" text="primary" size="xs" />
     <LButton type="success" text="success" size="sm" />
     <LButton type="warning" text="warning" size="md" />
-    <LButton type="error" text="error" size="lg" /> -->
+    <LButton type="error" text="error" size="lg" />
   </div>
 </template>
 
