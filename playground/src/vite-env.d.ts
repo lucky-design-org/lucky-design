@@ -8,6 +8,7 @@ declare module 'lucky-design' {
     LBacktop,
     LUpload,
     LIcon,
+    LTable,
   } from 'lucky-design'
   export {
     LButton,
@@ -18,5 +19,6 @@ declare module 'lucky-design' {
     LBacktop,
     LUpload,
     LIcon,
+    LTable,
   }
 }
