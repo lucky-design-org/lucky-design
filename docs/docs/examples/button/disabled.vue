@@ -1,14 +1,14 @@
 <script setup lang="ts">
-// import { LButton } from 'lucky-design'
+import { LButton } from 'lucky-design'
 </script>
 
 <template>
   <div class="container">
-    <!-- <LButton type="primary" text="primary" disabled="true" />
-    <LButton type="success" text="success" disabled="true" />
-    <LButton type="warning" text="warning" disabled="true" />
-    <LButton type="error" text="error" disabled="true" />
-    <LButton type="info" text="info" disabled="true" /> -->
+    <LButton type="primary" text="primary" :disabled="true" />
+    <LButton type="success" text="success" :disabled="true" />
+    <LButton type="warning" text="warning" :disabled="true" />
+    <LButton type="error" text="error" :disabled="true" />
+    <LButton type="info" text="info" :disabled="true" />
   </div>
 </template>
 
