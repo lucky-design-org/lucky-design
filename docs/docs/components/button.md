@@ -1,10 +1,10 @@
 # Button
 
 <script setup>
-// import Basic from '../examples/button/basic.vue'
-// import Size from '../examples/button/size.vue'
-// import Shape from '../examples/button/shape.vue'
-// import Disabled from '../examples/button/disabled.vue'
+import Basic from '../examples/button/basic.vue'
+import Size from '../examples/button/size.vue'
+import Shape from '../examples/button/shape.vue'
+import Disabled from '../examples/button/disabled.vue'
 </script>
 
 Commonly used button
@@ -102,11 +102,11 @@ import { LButton } from 'lucky-design'
 
 <template>
   <div class="container">
-    <LButton type="primary" text="primary" disabled="true" />
-    <LButton type="success" text="success" disabled="true" />
-    <LButton type="warning" text="warning" disabled="true" />
-    <LButton type="error" text="error" disabled="true" />
-    <LButton type="info" text="info" disabled="true" />
+    <LButton type="primary" text="primary" :disabled="true" />
+    <LButton type="success" text="success" :disabled="true" />
+    <LButton type="warning" text="warning" :disabled="true" />
+    <LButton type="error" text="error" :disabled="true" />
+    <LButton type="info" text="info" :disabled="true" />
   </div>
 </template>
 ```
