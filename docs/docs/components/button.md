@@ -46,6 +46,7 @@ import { LButton } from 'lucky-design'
 :::
 
 ::: details code
+
 ```vue
 <script setup lang="ts">
 import { LButton } from 'lucky-design'
@@ -60,6 +61,7 @@ import { LButton } from 'lucky-design'
   </div>
 </template>
 ```
+
 :::
 
 ## Button shape
@@ -71,6 +73,7 @@ import { LButton } from 'lucky-design'
 :::
 
 ::: details code
+
 ```vue
 <script setup lang="ts">
 import { LButton } from 'lucky-design'
@@ -84,6 +87,7 @@ import { LButton } from 'lucky-design'
   </div>
 </template>
 ```
+
 :::
 
 ## Disabled Button
@@ -95,6 +99,7 @@ import { LButton } from 'lucky-design'
 :::
 
 ::: details code
+
 ```vue
 <script setup lang="ts">
 import { LButton } from 'lucky-design'
@@ -110,6 +115,7 @@ import { LButton } from 'lucky-design'
   </div>
 </template>
 ```
+
 :::
 
 ## API
