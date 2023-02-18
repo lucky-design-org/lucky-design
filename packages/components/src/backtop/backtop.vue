@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { useWindowScroll } from '@vueuse/core'
 import { BacktopProps } from './props'
 
-const { visibilityHeight, right, bottom } = defineProps(BacktopProps)
+const { visibilityHeight = document.body.clientHeight, right, bottom } = defineProps(BacktopProps)
+const { y } = useWindowScroll()
 
 const backTop = () => {
   const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
@@ -13,11 +15,14 @@ const backTop = () => {
 </script>
 
 <template>
-  <div
-    class="ld-backtop"
-    :style="{ right: `${right}px`, bottom: `${bottom}` }"
-    @click="backTop"
-  >
-    <slot />
-  </div>
+  <transition name="fade-in">
+    <div
+      class="ld-backtop"
+      :class="[y > visibilityHeight ? 'visible opacity-100' : 'invisible opacity-0']"
+      :style="{ right: `${right}px`, bottom: `${bottom}` }"
+      @click="backTop"
+    >
+      <slot />
+    </div>
+  </transition>
 </template>

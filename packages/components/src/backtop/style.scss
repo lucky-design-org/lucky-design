@@ -1,4 +1,4 @@
 .ld-backtop {
   border: 1px solid;
-  @apply fixed right-[50px] bottom-[50px] border-[ld-primary] rounded cursor-pointer p-2 transition-all duration-300 ease-in-out
+  @apply ld-primary fixed right-[50px] bottom-[50px] border-context rounded cursor-pointer p-2 transition-all duration-700 ease-in-out
 }

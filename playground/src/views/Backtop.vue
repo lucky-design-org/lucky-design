@@ -5,7 +5,7 @@ import { LBacktop } from 'lucky-design'
 <template>
   <div class="container">
     <div>123</div>
-    <LBacktop :right="400">
+    <LBacktop :right="400" :visibility-height="400">
       back top
     </LBacktop>
   </div>
