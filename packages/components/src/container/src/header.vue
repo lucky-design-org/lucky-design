@@ -1,14 +1,8 @@
-<template>
-  <header class="ld-header" :style="style">
-    <slot />
-  </header>
-</template>
 <script lang="ts" setup>
 import { computed } from 'vue'
 
 import type { CSSProperties } from 'vue'
-import {headerProps} from '../props'
-
+import { headerProps } from '../props'
 
 const style = computed(() => {
   return headerProps.height
@@ -18,3 +12,9 @@ const style = computed(() => {
     : {}
 })
 </script>
+
+<template>
+  <header class="ld-header" :style="style">
+    <slot />
+  </header>
+</template>
