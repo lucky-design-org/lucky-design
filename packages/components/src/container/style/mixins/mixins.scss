@@ -1,0 +1,21 @@
+@use 'function' as *;
+@forward 'config';
+@forward 'function';
+@forward '_var';
+@use 'config' as *;
+
+// BEM
+@mixin b($block) {
+  $B: $namespace + '-' + $block !global;
+
+  .#{$B} {
+    @content;
+  }
+}
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
