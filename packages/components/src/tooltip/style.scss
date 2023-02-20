@@ -1,0 +1,41 @@
+.ld-tooltip {
+  @apply absolute c-white b-rd-5px left-0 top-0;
+  background-color: rgb(51, 51, 51);
+  padding: 5px 10px;
+  font-size: 12px;
+  .ld-tooltip__arrow {
+    @apply absolute;
+    &::before {
+      @apply w-10px h-10px absolute content-empty rotate-45 left-0 top-0;
+      background-color: rgb(51, 51, 51);
+    }
+    &[placement='top'] {
+      bottom: 5px;
+      left: 0px;
+    }
+    &[placement='right'] {
+      left: -5px;
+      top: 0px;
+    }
+    &[placement='left'] {
+      right: 5px;
+      top: 0px;
+    }
+    &[placement='bottom'] {
+      top: -5px;
+      left: 0px;
+    }
+  }
+}
+
+.ld-tooltip-content-enter-from,
+.ld-tooltip-content-leave-to {
+  @apply opacity-0;
+}
+
+.ld-tooltip-content-enter-active {
+  transition: opacity 0.25s;
+}
+.ld-tooltip-content-leave-active {
+  transition: opacity 0.5s;
+}
