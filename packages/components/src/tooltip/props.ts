@@ -7,7 +7,7 @@ export const toolTipProps = {
     default: 'bottom',
   },
   content: String,
-  appendTo: [String, HTMLElement],
+  appendTo: String,
   visible: Boolean,
 }
 
