@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { LButton, LDrawer } from 'lucky-design'
-import useIsEnglish from '../../../utils/useIsEnglish'
+import useIsEnglish from '../../../hooks/useIsEnglish'
 
 type DirectionType = 'right' | 'left' | 'top' | 'bottom'
 
@@ -38,6 +38,7 @@ const openDrawer = (dire: DirectionType) => {
     />
     <LDrawer
       title="抽屉"
+      bg-color="black"
       :visible="visible"
       :close="closeMask"
       :direction="direction"
