@@ -15,10 +15,10 @@ export default {
       next: '下一页',
     },
     nav: [
-      { text: '指南', link: '/zh-CN/guide/', activeMatch: '/zh-CN/guide' },
+      { text: '指南', link: '/zh-CN/guide/install', activeMatch: '/zh-CN/guide' },
       {
         text: '组件',
-        link: '/zh-CN/components/',
+        link: '/zh-CN/components/button',
         activeMatch: '/zh-CN/components',
       },
     ],
@@ -30,6 +30,21 @@ export default {
           items: [
             { text: '安装', link: '/zh-CN/guide/install' },
             { text: '快速开始', link: '/zh-CN/guide/start' },
+          ],
+        },
+        {
+          text: '开发',
+          collapsed: false,
+          items: [
+            { text: '开发指南', link: '/zh-CN/guide/develop' },
+            { text: '开发问题', link: '/zh-CN/guide/problem' },
+          ],
+        },
+        {
+          text: '其他',
+          collapsed: false,
+          items: [
+            { text: '翻译', link: '/zh-CN/guide/translate' },
           ],
         },
       ],

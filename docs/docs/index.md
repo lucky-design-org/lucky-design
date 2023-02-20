@@ -14,18 +14,18 @@ hero:
   actions:
     - theme: brand
       text: Get Starred
-      link: /guide/
+      link: /guide/install
     - theme: alt
       text: View on Github
       link: https://github.com/lucky-design-org/lucky-design
 features:
   - icon: 🔨
-    title: feature1
-    details: detail
+    title: Simple and intuitive
+    details: Design simple and intuitive operation process to reduce user's memory burden
   - icon: 🧩
-    title: feature2
-    details: detail
+    title: Clear and definite
+    details: The language is clear and the meaning is clear, so that users can quickly understand and make decisions
   - icon: ✈️
-    title: feature3
-    details: detail
+    title: Control feedback
+    details: Users can clearly perceive their own operations through interface style and interactive dynamic effect
 ---
