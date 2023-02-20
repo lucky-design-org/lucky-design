@@ -1,17 +1,5 @@
 <script setup lang="ts">
 import { LButton, LToolTip } from 'lucky-design'
-
-const onSuccess = (res: any) => {
-  // console.log(res)
-}
-const onProgress = (ev: ProgressEvent<XMLHttpRequestEventTarget>) => {
-  // console.log(ev)
-}
-
-const beforeUpload = (file: File) => {
-  // console.log(file)
-  return Promise.resolve()
-}
 </script>
 
 <template>
