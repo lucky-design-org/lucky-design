@@ -25,4 +25,9 @@
 
   /* 代码块背景色 */
   --vp-code-block-bg: rgba(40,44,52);
+
+  /* tip边框 */
+  --vp-custom-block-tip-border: #7d4ac9;
+  --vp-custom-block-tip-text: #7d4ac9;
+  --vp-custom-block-tip-bg: #7d4ac92e;
 }

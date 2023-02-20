@@ -27,6 +27,14 @@ export const drawerProps = {
     type: Function as PropType<() => void>,
     default: () => {},
   },
+  /**
+   * @description: drawer background color
+   * @default: white
+   */
+  bgColor: {
+    type: String,
+    default: 'white',
+  },
 }
 
 export type LDrawerProps = ExtractPropTypes<typeof drawerProps>

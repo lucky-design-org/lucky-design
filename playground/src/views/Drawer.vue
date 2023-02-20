@@ -20,7 +20,7 @@ const openDrawer = (dire: string) => {
     <LButton text="左边弹出" @click="openDrawer('left')" />
     <LButton text="上边弹出" @click="openDrawer('top')" />
     <LButton text="下边弹出" @click="openDrawer('bottom')" />
-    <LDrawer title="抽屉" :visible="visible" :close="closeMask" :direction="direction">
+    <LDrawer title="抽屉" :visible="visible" :close="closeMask" :direction="direction" bg-color="white">
       <div>123</div>
     </LDrawer>
   </div>

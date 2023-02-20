@@ -1,6 +1,8 @@
 # Environment
 
+:::tip
 Since Vue3 no longer supports IE11, lucky-design does not support IE browser either
+:::
 
 ## version
 

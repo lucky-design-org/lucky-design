@@ -6,3 +6,4 @@ import './style.scss'
 export const LToolTip = withInstall(ToolTip)
 
 export default LToolTip
+export * from './props'

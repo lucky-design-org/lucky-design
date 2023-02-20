@@ -42,6 +42,7 @@ const openDrawer = (dire: string) => {
       :visible="visible"
       :close="closeMask"
       :direction="direction"
+      :bg-color="color"
     >
       <div>123123123</div>
     </LDrawer>
@@ -53,9 +54,10 @@ const openDrawer = (dire: string) => {
 
 ## API
 
-| 名称      | 描述           | 类型    | 默认值 |
-| --------- | -------------- | ------- | ------ |
-| title     | 侧边栏的 title | string  | -      |
-| visible   | 是否显示       | boolean | false  |
-| direction | 出现的方向     | string  | right  |
-| close     | 关闭侧边栏     | function | -  |
+| 名称      | 描述           | 类型     | 默认值 |
+| --------- | -------------- | -------- | ------ |
+| title     | 侧边栏的 title | string   | -      |
+| visible   | 是否显示       | boolean  | false  |
+| direction | 出现的方向     | string   | right  |
+| close     | 关闭侧边栏     | function | -      |
+| bg-color  | 背景颜色       | string   | white  |
