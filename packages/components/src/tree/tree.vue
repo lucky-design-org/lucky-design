@@ -1,52 +1,39 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import treeItem from './treeItem.vue'
-const props = defineProps({
-  options: {
-    type: Object,
-    default: () => {
-      return {}
-    },
-  },
-  icon: String,
-  defaultOpenNodes: Array,
-  customClass: String,
-  multiple: Boolean,
-  defaultSelectNodes: {
-    type: Array,
+import type { PropType } from 'vue'
+
+const { data, show } = defineProps({
+  data: {
+    type: Array as PropType<any>,
     default: () => [],
   },
+  show: {
+    type: Boolean,
+    default: true,
+  },
 })
-const emit = defineEmits(['nodeClick', 'selectClick'])
-props.options.forEach((item, index) => {
-  item.key = index.toString()
-})
-const tabKey = ref('')
-const changeKey = (e) => {
-  tabKey.value = e
-}
-const nClick = (item) => {
-  emit('nodeClick', item)
+const emit = defineEmits(['setShow'])
+const setShow = (data: any) => {
+  emit('setShow', data)
 }
 </script>
 
 <template>
-  <div class="mzl-tree-content-box" :class="[customClass]">
-    <template v-for="(item, index) in options" :key="index">
-      <tree-item
-        :items="item"
-        :data-key="index"
-        :icon="icon"
-        :default-open-nodes="defaultOpenNodes"
-        :options="options"
-        :index="0"
-        :tab-indexs="tabKey"
-        :multiple="multiple"
-        :default-select-nodes="defaultSelectNodes"
-        @nodeClick="nClick($event)"
-        @change="changeKey($event)"
-        @selectClick="emit('selectClick', $event)"
-      />
-    </template>
-  </div>
+  <ul :style="{ display: show ? 'block' : 'none' }">
+    <div v-for="item in data" :key="item.value" @click.stop="setShow(item)">
+      <p :style="{ cursor: 'pointer' }">
+        {{ item.value }}
+      </p>
+      <template v-if="item.children">
+        <div>
+          <Tree :data="item.children" :show="item.show" @setShow="setShow" />
+        </div>
+      </template>
+    </div>
+  </ul>
 </template>
+
+<style>
+ul {
+  margin-left: 20px;
+}
+</style>
