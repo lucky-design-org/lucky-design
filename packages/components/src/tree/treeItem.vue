@@ -17,7 +17,8 @@ const recursiveFunction = function (items) {
         if (v.children) {
           getStr(v)
           str += `${v.label};`
-        } else {
+        }
+        else {
           str += `${v.label};`
         }
       })
@@ -37,7 +38,8 @@ const toggle = (item) => {
         setTimeout(() => {
           height.value = '26px'
         }, 100)
-      } else {
+      }
+      else {
         height.value = `${(recursiveFunction(item).length - 1) * 26}px`
       }
     }
@@ -51,33 +53,39 @@ const outClick = (item, e) => {
 }
 const getParents = (option, key) => {
   for (const i in option) {
-    if (option[i].key === key) return [option[i]]
+    if (option[i].key === key)
+      return [option[i]]
 
     if (option[i].children) {
       const ro = getParents(option[i].children, key)
-      if (ro !== undefined) return ro.concat(option[i])
+      if (ro !== undefined)
+        return ro.concat(option[i])
     }
   }
 }
 const setSelectted = (item, flag) => {
   item.forEach((v, i) => {
     v.isSelected = flag
-    if (v.children) setSelectted(v.children, flag)
+    if (v.children)
+      setSelectted(v.children, flag)
   })
 }
 let n = 0
 const isParentSel = (item) => {
   item.forEach((v, i) => {
     n += 1
-    if (v.isSelected) selectedLen.value += 1
+    if (v.isSelected)
+      selectedLen.value += 1
 
-    if (v.children) isParentSel(v.children)
+    if (v.children)
+      isParentSel(v.children)
   })
 }
 const getSameLevelChile = (item, item1) => {
   let n1 = 0
   item.children.forEach((v, i) => {
-    if (v.isSelected) n1 += 1
+    if (v.isSelected)
+      n1 += 1
   })
   // isParentSel(item1.children, item1)
   isParentSel(item1.children)
@@ -86,19 +94,23 @@ const getSameLevelChile = (item, item1) => {
     // selectedLen.value + 1
     item.isSelected = true
     item.semiSelected = false
-  } else if (n1 === 0) {
+  }
+  else if (n1 === 0) {
     item.isSelected = false
     item.semiSelected = false
-  } else {
+  }
+  else {
     item.semiSelected = true
   }
   if (selectedLen.value === n) {
     item1.isSelected = true
     item1.semiSelected = false
-  } else if (selectedLen.value === 0) {
+  }
+  else if (selectedLen.value === 0) {
     item1.isSelected = false
     item1.semiSelected = false
-  } else {
+  }
+  else {
     item1.isSelected = false
     item1.semiSelected = true
   }
@@ -106,9 +118,11 @@ const getSameLevelChile = (item, item1) => {
 }
 const getIsSelectNode = (option) => {
   option.forEach((v, i) => {
-    if (v.isSelected) selectList.value.push(v)
+    if (v.isSelected)
+      selectList.value.push(v)
 
-    if (v.children) getIsSelectNode(v.children)
+    if (v.children)
+      getIsSelectNode(v.children)
   })
   return selectList.value
 }
@@ -119,14 +133,17 @@ const selectClick = (item, index) => {
     selectList.value = []
     const nodeItems = getParents(props.options, item.key)
     if (item.isSelected) {
-      if (item.children) setSelectted(item.children, true)
+      if (item.children)
+        setSelectted(item.children, true)
 
       if (nodeItems.length > 1) {
         n = selectedLen.value = 0
         getSameLevelChile(nodeItems[1], nodeItems[nodeItems.length - 1])
       }
-    } else {
-      if (item.children) setSelectted(item.children, false)
+    }
+    else {
+      if (item.children)
+        setSelectted(item.children, false)
 
       if (nodeItems.length > 1) {
         n = selectedLen.value = 0
@@ -139,9 +156,11 @@ const selectClick = (item, index) => {
 }
 const setSelect = (option, key) => {
   option.forEach((v, i) => {
-    if (v.key === key) v.isSelected = true
+    if (v.key === key)
+      v.isSelected = true
 
-    if (v.children) setSelect(v.children, key)
+    if (v.children)
+      setSelect(v.children, key)
   })
 }
 onMounted(() => {
@@ -199,13 +218,13 @@ onMounted(() => {
                 icon !== 'icon-arrow-right-filling' ? false : items.isOpen,
             },
           ]"
-          ><LIcon
-            :class="[
-              {
-                'icon-arrow-right-filling':
-                  items.children && items.children.length,
-              },
-            ]"
+        ><LIcon
+          :class="[
+            {
+              'icon-arrow-right-filling':
+                items.children && items.children.length,
+            },
+          ]"
         /></span>
         <span
           v-if="multiple"

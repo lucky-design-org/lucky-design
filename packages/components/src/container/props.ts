@@ -1,5 +1,4 @@
-
-export  const asideProps = defineProps({
+export const asideProps = defineProps({
   width: {
     type: String,
     default: null,
