@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { drawerProps } from './props'
 
 const { title, direction, visible, close, bgColor } = defineProps(drawerProps)
