@@ -1,4 +1,4 @@
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { ExtractPropTypes } from 'vue'
 
 // import type { DirectionType } from '@lucky-design/common'common
 
@@ -44,7 +44,7 @@ export const tableProps = {
   defaultSort: {
     // type: Object as PropType<() => Sort | null>,
     // default: { column: 'id', order: 'asc' },
-    type: String as PropType<'asc'>,
+    type: String,
     default: 'asc',
   },
   tableClass: {

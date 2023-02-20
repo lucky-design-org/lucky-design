@@ -6,44 +6,44 @@ const { columns, rows, defaultSort, striped, visible } = defineProps(tableProps)
 const emit = defineEmits(['update:defaultSort', 'sort'])
 const search = ref('')
 const sort = ref('asc')
-const rowdata = reactive({
-  columns: [
-    {
-      label: 'id',
-      prop: 'id',
-    },
-    {
-      label: '名字',
-      prop: 'name',
-    }],
-  rows: [1, 2, 234, 4, 5,
-  // {
-  //   id: 1,
-  //   name: '鸡太美',
-  // },
-  // {
-  //   id: 2,
-  //   name: '鸡太美2',
-  // },
-  // {
-  //   id: 3,
-  //   name: '鸡太美3',
-  // },
-  // {
-  //   id: 4,
-  //   name: '鸡太美4',
-  // },
-  // {
-  //   id: 5,
-  //   name: 'asf',
-  // },
-  // {
-  //   id: 6,
-  //   name: 'Tom',
-  // }
-  ],
-},
-)
+// const rowdata = reactive({
+//   columns: [
+//     {
+//       label: 'id',
+//       prop: 'id',
+//     },
+//     {
+//       label: '名字',
+//       prop: 'name',
+//     }],
+//   rows: [1, 2, 234, 4, 5,
+//   // {
+//   //   id: 1,
+//   //   name: '鸡太美',
+//   // },
+//   // {
+//   //   id: 2,
+//   //   name: '鸡太美2',
+//   // },
+//   // {
+//   //   id: 3,
+//   //   name: '鸡太美3',
+//   // },
+//   // {
+//   //   id: 4,
+//   //   name: '鸡太美4',
+//   // },
+//   // {
+//   //   id: 5,
+//   //   name: 'asf',
+//   // },
+//   // {
+//   //   id: 6,
+//   //   name: 'Tom',
+//   // }
+//   ],
+// },
+// )
 // watch(
 //   () => tableProps.defaultSort,
 //   (newVal) => {
@@ -61,13 +61,13 @@ const rowdata = reactive({
 //   emit('sort', sort.value)
 // }
 const handleSort = (sort) => {
-  // const newSort = { order: 'asc' }
+  let newSort = ''
   // if (sort.order === )
-  sort = sort === 'asc' ? 'desc' : 'asc'
-
+  newSort = defaultSort === 'asc' ? 'desc' : 'asc'
+  // console.log(newSort);
   // sort = newSort
-  emit('update:defaultSort', sort)
-  emit('sort', sort)
+  emit('update:defaultSort', defaultSort)
+  emit('sort', defaultSort)
 }
 // const filteredRows = computed(() => {
 //   let result = tableProps.rows.slice()
@@ -95,7 +95,61 @@ const handleSort = (sort) => {
 //   return result
 // })
 const filteredRows = computed(() => {
-  let result = rowdata.rows.values[0].slice()
+  // let result = rowdata.rows.values[0].slice()
+  const rowss = []
+  // console.log([rows])
+  if (rows === undefined) {
+    const rowss = [
+      {
+        id: 1,
+        name: '鸡太美',
+        age: 39,
+        sex: 2,
+        handle: 3,
+      },
+      {
+        id: 2,
+        name: '鸡太美2',
+        age: 40,
+        sex: 2,
+        handle: 3,
+      },
+      {
+        id: 3,
+        name: '鸡太美3',
+        age: 40,
+        sex: 2,
+        handle: 3,
+      },
+      {
+        id: 4,
+        name: '鸡太美4',
+        age: 40,
+        sex: 2,
+        handle: 3,
+      },
+      {
+        id: 5,
+        name: 'asf',
+        age: 40,
+        sex: 2,
+        handle: 3,
+      },
+      {
+        id: 6,
+        name: 'Tom',
+        age: 40,
+        sex: 2,
+        handle: 3,
+      },
+    ]
+  }
+  // var arr = [] //定义数组
+  // for (let i in rows) {
+  //     result.push(rows[i])
+  // }
+  let result = rowss.slice(0)
+  // result = rows.slice(0)
   if (search.value) {
     const searchRegex = new RegExp(search.value, 'i')
     result = result.filter(row =>
@@ -135,13 +189,10 @@ const sortIonClass = (sort) => {
         <th
           v-for="(column) in columns"
           :key="column.label"
-          @click="handleSort(column)"
         >
-          {{ column.label }}
-          <sapn class="ltable__caret-wrapper">
-            <span :class="sortIonClass(column)" >
-            </span>
-          </sapn>
+          {{ column.label }}  <span @click="handleSort('asc')">{{ sortIonClass(column) }}</span>
+          <!-- <sapn class="ltable__caret-wrapper"> -->
+          <!-- </sapn> -->
         </th>
       </tr>
     </thead>

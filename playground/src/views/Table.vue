@@ -70,7 +70,7 @@ const r = [
   },
 ]
 
-const test1 = (record: Object) => {
+const test1 = () => {
 //   console.log(state.columns)
 }
 </script>
@@ -79,14 +79,10 @@ const test1 = (record: Object) => {
   <div class="container">
     <!-- {{ name }} -->
     <LTable :columns="c" :rows="r" :striped="true">
-      <th />
-      <td v-for="column in columns" :key="column.field">
-        {{ column.prop }}
-      </td>
     </LTable>
     <div style="display: flex">
-      <LButton type="info" text="按钮" shape="round" @click="test1(record)" />
-      <LButton type="primary" text="修改" size="sm" @click="test1(record)" />
+      <LButton type="info" text="按钮" shape="round" @click="test1()" />
+      <LButton type="primary" text="修改" size="sm" @click="test1()" />
       <!-- <y-button type='success' @click="test(record)" style="margin-right:10px">修改</y-button>
       <y-button type='danger' @click="test(record)">删除</y-button> -->
     </div>
