@@ -1,8 +1,12 @@
-# environment
+# Environment
 
 Since Vue3 no longer supports IE11, lucky-design does not support IE browser either
 
-# install
+## version
+
+- Lucky-Design is still in rapid development iteration
+
+## install
 
 ```cmd
 # Choose a package manager of your liking
@@ -11,8 +15,8 @@ Since Vue3 no longer supports IE11, lucky-design does not support IE browser eit
 $ npm install lucky-design --save
 
 # Yarn
-$ yarn add lucky-design
+$ yarn add lucky-design --save
 
 # pnpm
-$ pnpm add lucky-design
+$ pnpm add lucky-design --save
 ```

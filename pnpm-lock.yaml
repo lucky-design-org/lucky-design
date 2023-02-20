@@ -70,6 +70,7 @@ importers:
   docs:
     specifiers:
       lucky-design: workspace:*
+      markdown-it-task-lists: ^2.1.1
       vite: ^4.0.0
       vitepress: 1.0.0-alpha.45
       vue: ^3.2.45
@@ -77,6 +78,7 @@ importers:
       lucky-design: link:../packages/lucky-design
       vue: 3.2.45
     devDependencies:
+      markdown-it-task-lists: 2.1.1
       vite: 4.0.4
       vitepress: 1.0.0-alpha.45
 
@@ -4578,6 +4580,10 @@ packages:
   /map-obj/4.3.0:
     resolution: {integrity: sha512-hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==}
     engines: {node: '>=8'}
+    dev: true
+
+  /markdown-it-task-lists/2.1.1:
+    resolution: {integrity: sha512-TxFAc76Jnhb2OUu+n3yz9RMu4CwGfaT788br6HhEDlvWfdeJcLUsxk1Hgw2yJio0OXsxv7pyIPmvECY7bMbluA==}
     dev: true
 
   /mdast-util-from-markdown/0.8.5:

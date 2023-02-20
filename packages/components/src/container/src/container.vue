@@ -1,8 +1,3 @@
-<template>
-  <section :class="['ld-section',is('vertical', isVertical)]">
-    <slot />
-  </section>
-</template>
 <script lang="ts" setup>
 import { computed, useSlots } from 'vue'
 
@@ -22,19 +17,26 @@ const is: {
 }
 
 const isVertical = computed(() => {
-  if (containerProps.direction === 'vertical') {
+  if (containerProps.direction === 'vertical')
     return true
-  } else if (containerProps.direction === 'horizontal') {
+  else if (containerProps.direction === 'horizontal')
     return false
-  }
+
   if (slots && slots.default) {
     const vNodes: VNode[] = slots.default()
     return vNodes.some((vNode) => {
       const tag = (vNode.type as Component).name
       return tag === 'LHeader' || tag === 'LFooter'
     })
-  } else {
+  }
+  else {
     return false
   }
 })
 </script>
+
+<template>
+  <section class="ld-section" :class="[is('vertical', isVertical)]">
+    <slot />
+  </section>
+</template>

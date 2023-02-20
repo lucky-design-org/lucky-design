@@ -3,6 +3,10 @@ import { reactive } from 'vue'
 import { LTable } from 'lucky-design'
 const c = [
   {
+    label: 'id',
+    prop: 'id',
+  },
+  {
     label: '名字',
     prop: 'name',
   },
@@ -21,44 +25,50 @@ const c = [
     //   customRender: true,
   },
 ]
-const state = reactive({
-  columns: [
-    {
-      label: '名字',
-      prop: 'name',
-    },
-    {
-      label: '年龄',
-      prop: 'age',
-    },
-    {
-      label: '性别',
-      prop: 'sex',
-    //   customRender: true,
-    },
-    {
-      label: '操作',
-      prop: 'handle',
-    //   customRender: true,
-    },
-  ],
-  rows: [
-    {
-      name: '鸡太美',
-      id: 39,
-      key: '1',
-      reload: 3,
-    },
-    {
-      name: '鸡太美2',
-      id: 40,
-      key: '2',
-      reload: 3,
-    },
-  ],
-})
-const { columns } = state.columns
-const { rows } = state.rows
+const r = [
+  {
+    id: 1,
+    name: '鸡太美',
+    age: 39,
+    sex: 2,
+    handle: 3,
+  },
+  {
+    id: 2,
+    name: '鸡太美2',
+    age: 40,
+    sex: 2,
+    handle: 3,
+  },
+  {
+    id: 3,
+    name: '鸡太美3',
+    age: 40,
+    sex: 2,
+    handle: 3,
+  },
+  {
+    id: 4,
+    name: '鸡太美4',
+    age: 40,
+    sex: 2,
+    handle: 3,
+  },
+  {
+    id: 5,
+    name: 'asf',
+    age: 40,
+    sex: 2,
+    handle: 3,
+  },
+  {
+    id: 6,
+    name: 'Tom',
+    age: 40,
+    sex: 2,
+    handle: 3,
+  },
+]
 
 const test1 = (record: Object) => {
 //   console.log(state.columns)
@@ -67,8 +77,8 @@ const test1 = (record: Object) => {
 
 <template>
   <div class="container">
-    why？？？
-    <LTable :columns="c" :rows="rows">
+    <!-- {{ name }} -->
+    <LTable :columns="c" :rows="r" :striped="true">
       <th />
       <td v-for="column in columns" :key="column.field">
         {{ column.prop }}

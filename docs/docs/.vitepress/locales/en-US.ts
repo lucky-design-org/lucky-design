@@ -14,10 +14,10 @@ export default {
       next: 'Next page',
     },
     nav: [
-      { text: 'Guide', link: '/guide/', activeMatch: '/guide' },
+      { text: 'Guide', link: '/guide/install', activeMatch: '/guide' },
       {
         text: 'Components',
-        link: '/components/',
+        link: '/components/button',
         activeMatch: '/components',
       },
     ],
@@ -27,8 +27,23 @@ export default {
           text: 'Guide',
           collapsed: false,
           items: [
-            { text: 'Install', link: '/guide/install' },
-            { text: 'Start', link: '/guide/start' },
+            { text: 'install', link: '/guide/install' },
+            { text: 'start', link: '/guide/start' },
+          ],
+        },
+        {
+          text: 'development',
+          collapsed: false,
+          items: [
+            { text: 'develop guide', link: '/guide/develop' },
+            { text: 'develop problem', link: '/guide/problem' },
+          ],
+        },
+        {
+          text: 'other',
+          collapsed: false,
+          items: [
+            { text: 'translate', link: '/guide/translate' },
           ],
         },
       ],

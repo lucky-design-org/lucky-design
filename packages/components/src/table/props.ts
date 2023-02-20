@@ -1,44 +1,64 @@
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
 
 // import type { DirectionType } from '@lucky-design/common'common
 
+interface TableColumn {
+  label: string
+  prop: string
+}
+interface TableRow {
+  id: number
+  [key: string]: string | number
+}
+interface Sort {
+  column: String
+  order: 'asc' | 'desc'
+}
+export type {
+  TableColumn,
+  TableRow,
+  Sort,
+}
 export const tableProps = {
-  /**
-   * @description: table data
-   */
-  data: {
-    type: Array as () => any[],
-    default: () => [],
-  },
   /**
    * @description: table columns
    */
   columns: {
-    type: Array as () => any[],
-    default: () => [],
+    type: Array as () => TableColumn[],
+    required: true,
   },
   /**
-   * @description: table cells' content sortkey
+   * @description: table rows
    */
-  sortKey: {
-    type: String,
-    default: '',
+  rows: {
+    type: Array as () => TableRow[],
+    required: true,
   },
   /**
    * @description: sort orders about table cells' content
    */
-  // sortOrders: {
-  //   type: Object as PropOptions<Record<string, number>>,
-  //   default: () => ({}),
-  // },
+  striped: {
+    type: Boolean,
+    default: false,
+  },
+  defaultSort: {
+    // type: Object as PropType<() => Sort | null>,
+    // default: { column: 'id', order: 'asc' },
+    type: String as PropType<'asc'>,
+    default: 'asc',
+  },
+  tableClass: {
+    type: String,
+    default: '',
+  },
 
   /**
-   * @description: Whether to fit the browser windows
+   * @description: Whether to visible the browser windows
    */
-  fit: {
+  visible: {
     type: Boolean,
     default: true,
   },
 }
-
+// export const data = {TableColumn, TableRow}
 export type LTableProps = ExtractPropTypes<typeof tableProps>

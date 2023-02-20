@@ -8,5 +8,5 @@ const { className } = defineProps(iconProps)
 </template>
 
 <style>
-@import url('//at.alicdn.com/t/c/font_3893724_1gko5a08oqt.css');
+@import url('//at.alicdn.com/t/c/font_3893724_um6h824c44l.css');
 </style>
