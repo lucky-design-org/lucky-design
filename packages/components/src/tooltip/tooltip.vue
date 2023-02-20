@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { StyleValue } from 'vue'
 import { ref, unref, watch } from 'vue'
 import { toolTipProps } from './props'
 import LTrigger from './trigger.vue'
@@ -12,15 +11,22 @@ const triggerRef = ref<HTMLElement | null>(null)
 const setTriggerRef = (val: HTMLElement | null) => {
   triggerRef.value = val
 }
+
 const show = ref(visible || false)
-const timer = ref()
+watch(
+  () => visible,
+  (val) => {
+    show.value = val
+  },
+)
+let timer: any = null
 const onOpen = () => {
-  clearTimeout(timer.value)
+  clearTimeout(timer)
   show.value = true
   emits('update:visible', true)
 }
 const onClose = () => {
-  timer.value = setTimeout(() => {
+  timer = setTimeout(() => {
     show.value = false
     emits('update:visible', true)
   }, 200)

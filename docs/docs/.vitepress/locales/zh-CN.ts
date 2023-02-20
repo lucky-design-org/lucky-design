@@ -86,6 +86,7 @@ export default {
           items: [
             { text: 'Drawer 抽屉', link: '/zh-CN/components/drawer' },
             { text: 'Message 消息提示', link: '/zh-CN/components/message' },
+            { text: 'Tooltip 文字提示', link: '/zh-CN/components/tooltip' },
           ],
         },
       ],

@@ -6,7 +6,8 @@ export default {
     lastUpdatedText: 'Last updated',
     outlineTitle: 'On this page',
     editLink: {
-      pattern: 'https://github.com/lucky-design-org/lucky-design/edit/master/docs/docs/:path',
+      pattern:
+        'https://github.com/lucky-design-org/lucky-design/edit/master/docs/docs/:path',
       text: 'Edit this page on GitHub',
     },
     docFooter: {
@@ -42,9 +43,7 @@ export default {
         {
           text: 'other',
           collapsed: false,
-          items: [
-            { text: 'translate', link: '/guide/translate' },
-          ],
+          items: [{ text: 'translate', link: '/guide/translate' }],
         },
       ],
       '/components': [
@@ -75,9 +74,7 @@ export default {
         {
           text: 'Navigation',
           collapsed: false,
-          items: [
-            { text: 'Backtop', link: '/components/backtop' },
-          ],
+          items: [{ text: 'Backtop', link: '/components/backtop' }],
         },
         {
           text: 'Feedback',
@@ -85,6 +82,7 @@ export default {
           items: [
             { text: 'Drawer', link: '/components/drawer' },
             { text: 'Message', link: '/components/message' },
+            { text: 'Tooltip', link: '/components/tooltip' },
           ],
         },
       ],

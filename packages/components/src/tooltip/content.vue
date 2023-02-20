@@ -40,16 +40,27 @@ const computedStyle = (width: number, height: number) => {
     }
   }
 }
+let isClose = false
+const contentOpen = () => {
+  if (isClose)
+    return
+  props.onOpen()
+}
+const contentClose = () => {
+  isClose = true
+  props.onClose()
+}
+
 watch(contentRef, (val, pre) => {
   if (val) {
     const width = val.clientWidth
     const height = val.clientHeight
     computedStyle(width, height)
-
-    val.addEventListener('mousemove', props.onOpen)
-    val.addEventListener('mouseleave', props.onClose)
-    pre?.removeEventListener('mousemove', props.onOpen)
-    pre?.removeEventListener('mouseleave', props.onClose)
+    isClose = false
+    val.addEventListener('mousemove', contentOpen)
+    val.addEventListener('mouseleave', contentClose)
+    pre?.removeEventListener('mousemove', contentOpen)
+    pre?.removeEventListener('mouseleave', contentClose)
   }
 })
 </script>
