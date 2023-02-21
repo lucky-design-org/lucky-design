@@ -1,7 +1,7 @@
 # Message
 
 <script setup>
-import Basic from '../../examples/message/basic.vue'
+import Basic from '../../examples/message/Basic.vue'
 import Duration from '../../examples/message/Duration.vue'
 import Offset from '../../examples/message/Offset.vue'
 </script>
