@@ -21,9 +21,11 @@ import { LTree } from 'lucky-design'
 const data = ref([])
 const recursionSetShow = (origin: any, id: any) => {
   origin.forEach((item: any) => {
-    if (item.value === id) item.show = !item.show
+    if (item.value === id)
+      item.show = !item.show
 
-    if (item.children) recursionSetShow(item.children, id)
+    if (item.children)
+      recursionSetShow(item.children, id)
   })
 }
 const setShow = ({ value }: any) => {
@@ -32,7 +34,8 @@ const setShow = ({ value }: any) => {
 const recursionAddShow = (data: any) => {
   return data.map((ele: any) => {
     ele.show = false
-    if (ele.children && ele.children.length) recursionAddShow(ele.children)
+    if (ele.children && ele.children.length)
+      recursionAddShow(ele.children)
 
     return ele
   })
@@ -81,7 +84,7 @@ data.value = recursionAddShow([
 
 <template>
   <div>
-    <LTree :data="data" @setShow="setShow" />
+    <LTree :data="data" @set-show="setShow" />
   </div>
 </template>
 ```

@@ -78,8 +78,7 @@ const test1 = () => {
 <template>
   <div class="container">
     <!-- {{ name }} -->
-    <LTable :columns="c" :rows="r" :striped="true">
-    </LTable>
+    <LTable :columns="c" :rows="r" :striped="true" />
     <div style="display: flex">
       <LButton type="info" text="按钮" shape="round" @click="test1()" />
       <LButton type="primary" text="修改" size="sm" @click="test1()" />
