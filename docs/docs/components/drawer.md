@@ -59,3 +59,4 @@ const openDrawer = (dire: string) => {
 | visible   | show                    | boolean  | false   |
 | direction | direction of occurrence | string   | right   |
 | close     | close sidebar           | function | -       |
+| bg-color  | background color        | string   | white   |

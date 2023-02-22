@@ -25,7 +25,7 @@ const setShow = (data: any) => {
       </p>
       <template v-if="item.children">
         <div>
-          <Tree :data="item.children" :show="item.show" @setShow="setShow" />
+          <Tree :data="item.children" :show="item.show" @set-show="setShow" />
         </div>
       </template>
     </div>
