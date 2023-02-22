@@ -1,5 +1,3 @@
-type XMLHttpFN = (ev: ProgressEvent<XMLHttpRequestEventTarget>) => void
-
 export interface UploadRequestOptions {
   action: string
   method: string
@@ -7,7 +5,7 @@ export interface UploadRequestOptions {
   data?: { [k: string]: string | Blob }
   filename: string
   withCredentials: boolean
-  onProgress?: XMLHttpFN
+  onProgress?: (et: ProgressEvent<EventTarget>) => void
   onSuccess: (res: any) => void
   onError?: (
     actions: string,
@@ -53,9 +51,8 @@ export const httpRequest = (options: UploadRequestOptions): XMLHttpRequest => {
 
   xhr.open(method, action, true)
 
-  xhr.addEventListener('progress', (ev) => {
-    onProgress && onProgress(ev)
-  })
+  if (onProgress)
+    xhr.upload.onprogress = onProgress
 
   xhr.addEventListener('error', () => {
     onError && onError(action, options, xhr)

@@ -8,6 +8,7 @@ const props = withDefaults(
     action: string
     data?: { [k: string]: string | Blob }
     method?: string
+    drag?: boolean
     autoUpload?: boolean
     name?: string
     multiple?: boolean
@@ -15,7 +16,7 @@ const props = withDefaults(
     withCredentials?: boolean
     disabled?: boolean
     beforeUpload?: (file: File) => Promise<any>
-    onProgress?: (et: ProgressEvent<XMLHttpRequestEventTarget>) => void
+    onProgress?: (et: ProgressEvent<EventTarget>) => void
     onSuccess?: (res: any) => void
     onError?: (
       actions: string,
@@ -30,6 +31,7 @@ const props = withDefaults(
     withCredentials: false,
     disabled: false,
     multiple: false,
+    drag: false,
   },
 )
 
@@ -65,14 +67,14 @@ const upload = (file: File) => {
       onSuccess && onSuccess(res)
     },
   }
-
   if (beforeUpload) {
     beforeUpload(file)
       .then(() => {
         const xhr = httpRequest(options)
         requests.push(xhr)
       })
-      .catch(() => {})
+      .catch(() => {
+      })
   }
   else {
     const xhr = httpRequest(options)
@@ -82,7 +84,6 @@ const upload = (file: File) => {
 const uploadFiles = (files: File[]) => {
   if (!files.length)
     return
-
   for (const file of files) {
     inCompleteFiles.value.push(file)
     if (props.autoUpload)
@@ -118,6 +119,7 @@ defineExpose({
     <input
       ref="inputRef"
       class="ld-upload_input"
+      :class="{ 'ld-upload_input-drag': drag }"
       :name="name"
       :disabled="disabled"
       :multiple="multiple"
