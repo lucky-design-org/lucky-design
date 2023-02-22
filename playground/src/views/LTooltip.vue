@@ -1,12 +1,18 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { LButton, LToolTip } from 'lucky-design'
+
+const visibel = ref(true)
+const onclick = () => {
+  visibel.value = !visibel.value
+}
 </script>
 
 <template>
   <div>
     <div class="container">
       <p>
-        <LToolTip content="阿斯顿撒旦" placement="bottom">
+        <LToolTip content="撒旦阿斯顿撒旦阿斯" placement="bottom">
           <LButton text="测试" type="primary" />
         </LToolTip>
       </p>
@@ -24,6 +30,17 @@ import { LButton, LToolTip } from 'lucky-design'
         <LToolTip content="阿斯顿撒旦" placement="right">
           <LButton text="测试" type="primary" />
         </LToolTip>
+      </p>
+      <p>
+        <LToolTip
+          v-model:visible="visibel"
+          content="阿斯顿撒旦"
+          placement="right"
+        >
+          <LButton text="测试" type="primary" />
+        </LToolTip>
+
+        <LButton text="切换" @click="onclick" />
       </p>
     </div>
   </div>

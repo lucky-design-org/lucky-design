@@ -1,20 +1,21 @@
 <script setup lang="ts">
-import { ref, unref, watch } from 'vue'
+import { onMounted, ref, unref, watch } from 'vue'
 import { toolTipProps } from './props'
 import LTrigger from './trigger.vue'
 import LContent from './content.vue'
 
-const { appendTo, placement, visible, content } = defineProps(toolTipProps)
+const props = defineProps(toolTipProps)
 const emits = defineEmits(['update:visible'])
-
+const { appendTo, placement, visible, content } = props
 const triggerRef = ref<HTMLElement | null>(null)
 const setTriggerRef = (val: HTMLElement | null) => {
   triggerRef.value = val
 }
 
-const show = ref(visible || false)
+const show = ref(false)
+
 watch(
-  () => visible,
+  () => props.visible,
   (val) => {
     show.value = val
   },
@@ -28,9 +29,13 @@ const onOpen = () => {
 const onClose = () => {
   timer = setTimeout(() => {
     show.value = false
-    emits('update:visible', true)
+    emits('update:visible', false)
   }, 200)
 }
+onMounted(() => {
+  if (visible)
+    onOpen()
+})
 
 const mouseEnter = () => {
   onOpen()
