@@ -67,14 +67,14 @@ const upload = (file: File) => {
       onSuccess && onSuccess(res)
     },
   }
+
   if (beforeUpload) {
     beforeUpload(file)
       .then(() => {
         const xhr = httpRequest(options)
         requests.push(xhr)
       })
-      .catch(() => {
-      })
+      .catch(() => {})
   }
   else {
     const xhr = httpRequest(options)
@@ -121,6 +121,7 @@ defineExpose({
       class="ld-upload_input"
       :class="{ 'ld-upload_input-drag': drag }"
       :name="name"
+      :accept="accept"
       :disabled="disabled"
       :multiple="multiple"
       type="file"
