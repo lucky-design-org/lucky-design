@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
 import { LTable } from 'lucky-design'
 const c = [
   {
