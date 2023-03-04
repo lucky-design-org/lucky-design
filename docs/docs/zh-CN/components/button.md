@@ -32,6 +32,13 @@ import { LButton } from 'lucky-design'
     <LButton type="error" text="error" />
     <LButton type="info" text="info" />
   </div>
+  <div class="container">
+    <LButton type="primary" text="primary" :plain="true" />
+    <LButton type="success" text="success" :plain="true" />
+    <LButton type="warning" text="warning" :plain="true" />
+    <LButton type="error" text="error" :plain="true" />
+    <LButton type="info" text="info" :plain="true" />
+  </div>
 </template>
 ```
 
@@ -120,9 +127,10 @@ import { LButton } from 'lucky-design'
 
 ## API
 
-| 名称     | 描述       | 类型    | 默认值  |
-| -------- | ---------- | ------- | ------- |
-| type     | 按钮的类型 | string  | primary |
-| size     | 按钮的大小 | string  | md      |
-| shape    | 按钮的形状 | string  | square  |
-| disabled | 禁用按钮   | boolean | false   |
+| 名称     | 描述           | 类型    | 默认值  |
+| -------- | -------------- | ------- | ------- |
+| type     | 按钮的类型     | string  | primary |
+| plain    | 是否为朴素按钮 | boolean | false   |
+| size     | 按钮的大小     | string  | md      |
+| shape    | 按钮的形状     | string  | square  |
+| disabled | 禁用按钮       | boolean | false   |
