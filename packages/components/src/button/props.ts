@@ -9,7 +9,10 @@ export const buttonProps = {
     type: String as PropType<StatusType | 'primary'>,
     default: 'primary',
   },
-
+  plain: {
+    type: Boolean as PropType<Boolean | false>,
+    default: false,
+  },
   /**
    * @description: Button text
    */
