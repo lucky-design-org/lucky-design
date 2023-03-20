@@ -8,6 +8,6 @@ import '@vitepress-demo-preview/component/dist/style.css'
 export default {
   ...Theme,
   enhanceApp({ app }) {
-    app.component('demo-preview', AntDesignContainer)
+    app.component('DemoPreview', AntDesignContainer)
   },
 }
