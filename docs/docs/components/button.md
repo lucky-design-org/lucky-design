@@ -23,6 +23,7 @@ Commonly used button
 | Name     | Description        | Type    | Default |
 | -------- | ------------------ | ------- | ------- |
 | type     | button type        | string  | primary |
+| plain    | plain button       | boolean | false   |
 | size     | button size        | string  | md      |
 | shape    | button shape       | string  | square  |
 | disabled | disable the button | boolean | false   |

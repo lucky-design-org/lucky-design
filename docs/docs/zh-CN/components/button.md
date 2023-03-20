@@ -120,9 +120,10 @@ import { LButton } from 'lucky-design'
 
 ## API
 
-| 名称     | 描述       | 类型    | 默认值  |
-| -------- | ---------- | ------- | ------- |
-| type     | 按钮的类型 | string  | primary |
-| size     | 按钮的大小 | string  | md      |
-| shape    | 按钮的形状 | string  | square  |
-| disabled | 禁用按钮   | boolean | false   |
+| 名称     | 描述           | 类型    | 默认值  |
+| -------- | -------------- | ------- | ------- |
+| type     | 按钮的类型     | string  | primary |
+| plain    | 是否为朴素按钮 | boolean | false   |
+| size     | 按钮的大小     | string  | md      |
+| shape    | 按钮的形状     | string  | square  |
+| disabled | 禁用按钮       | boolean | false   |

@@ -10,6 +10,13 @@ import { LButton } from 'lucky-design'
     <LButton type="error" text="error" />
     <LButton type="info" text="info" />
   </div>
+  <div class="container">
+    <LButton type="primary" text="primary" :plain="true" />
+    <LButton type="success" text="success" :plain="true" />
+    <LButton type="warning" text="warning" :plain="true" />
+    <LButton type="error" text="error" :plain="true" />
+    <LButton type="info" text="info" :plain="true" />
+  </div>
 </template>
 
 <style scoped>
