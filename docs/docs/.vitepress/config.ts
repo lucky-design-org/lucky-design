@@ -1,4 +1,8 @@
 import { defineConfig } from 'vitepress'
+import {
+  componentPreview,
+  containerPreview,
+} from '@vitepress-demo-preview/plugin'
 import locales from './locales'
 
 export default defineConfig({
@@ -29,6 +33,8 @@ export default defineConfig({
     config: (md) => {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       md.use(require('markdown-it-task-lists'))
+      md.use(componentPreview)
+      md.use(containerPreview)
     },
   },
 

@@ -69,7 +69,10 @@ importers:
 
   docs:
     specifiers:
+      '@vitepress-demo-preview/component': ^2.2.0
+      '@vitepress-demo-preview/plugin': ^1.1.7
       lucky-design: workspace:*
+      markdown-it: ^13.0.1
       markdown-it-task-lists: ^2.1.1
       vite: ^4.0.0
       vitepress: 1.0.0-alpha.45
@@ -78,6 +81,9 @@ importers:
       lucky-design: link:../packages/lucky-design
       vue: 3.2.45
     devDependencies:
+      '@vitepress-demo-preview/component': 2.2.0_d2yqazp7x55d4k5bj4sr5vqbiq
+      '@vitepress-demo-preview/plugin': 1.1.7_d2yqazp7x55d4k5bj4sr5vqbiq
+      markdown-it: 13.0.1
       markdown-it-task-lists: 2.1.1
       vite: 4.0.4
       vitepress: 1.0.0-alpha.45
@@ -1138,6 +1144,10 @@ packages:
       - supports-color
     dev: true
 
+  /@flypeng/tool/5.2.0:
+    resolution: {integrity: sha512-aO2NKyYHs4DEoHWLTBAp4IjPldxU+D+vSKZvYNqufdegZfl4AYdW6w5BXumihqUW3Xf7YeSncNdD3PWF4KRusQ==}
+    dev: true
+
   /@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}
     engines: {node: '>=10.10.0'}
@@ -1763,6 +1773,29 @@ packages:
       vue: ^3.2.25
     dependencies:
       vite: 4.0.4_ovmyjmuuyckt3r3gpaexj2onji
+      vue: 3.2.45
+    dev: true
+
+  /@vitepress-demo-preview/component/2.2.0_d2yqazp7x55d4k5bj4sr5vqbiq:
+    resolution: {integrity: sha512-L9ke9p8jo5/tly1WwTW9bYB34Fq4/KBoL4ysnoJUlFxhZeCNx8h6gIAEO/AkWGJbKMgOsvPVXgrXz91s1jrMDQ==}
+    peerDependencies:
+      vitepress: '*'
+      vue: ^3.2.0
+    dependencies:
+      vitepress: 1.0.0-alpha.45
+      vue: 3.2.45
+    dev: true
+
+  /@vitepress-demo-preview/plugin/1.1.7_d2yqazp7x55d4k5bj4sr5vqbiq:
+    resolution: {integrity: sha512-6yqbD4OI5T5S0oYARdM5YoLcmy7Sr5ZRYmR6nT7eWt3TTZArNaB6Or1msGtl0vHshKVjpluNDhRFPReMQm4n1Q==}
+    peerDependencies:
+      vitepress: '*'
+      vue: ^3.2.0
+    dependencies:
+      '@flypeng/tool': 5.2.0
+      markdown-it: 13.0.1
+      markdown-it-container: 3.0.0
+      vitepress: 1.0.0-alpha.45
       vue: 3.2.45
     dev: true
 
@@ -2770,6 +2803,11 @@ packages:
 
   /emoji-regex/9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
+    dev: true
+
+  /entities/3.0.1:
+    resolution: {integrity: sha512-WiyBqoomrwMdFG1e0kqvASYfnlb0lp8M5o5Fw2OFq1hNZxxcNk8Ik0Xm7LxzBhuidnZB/UtBqVCgUz3kBOP51Q==}
+    engines: {node: '>=0.12'}
     dev: true
 
   /entities/4.4.0:
@@ -4401,6 +4439,12 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
+  /linkify-it/4.0.1:
+    resolution: {integrity: sha512-C7bfi1UZmoj8+PQx22XyeXCuBlokoyWQL5pWSP+EI6nzRylyThouddufc2c1NDIcP9k5agmN9fLpA7VNJfIiqw==}
+    dependencies:
+      uc.micro: 1.0.6
+    dev: true
+
   /lint-staged/13.1.0:
     resolution: {integrity: sha512-pn/sR8IrcF/T0vpWLilih8jmVouMlxqXxKuAojmbiGX5n/gDnz+abdPptlj0vYnbfE0SQNl3CY/HwtM0+yfOVQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
@@ -4582,8 +4626,23 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /markdown-it-container/3.0.0:
+    resolution: {integrity: sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==}
+    dev: true
+
   /markdown-it-task-lists/2.1.1:
     resolution: {integrity: sha512-TxFAc76Jnhb2OUu+n3yz9RMu4CwGfaT788br6HhEDlvWfdeJcLUsxk1Hgw2yJio0OXsxv7pyIPmvECY7bMbluA==}
+    dev: true
+
+  /markdown-it/13.0.1:
+    resolution: {integrity: sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==}
+    hasBin: true
+    dependencies:
+      argparse: 2.0.1
+      entities: 3.0.1
+      linkify-it: 4.0.1
+      mdurl: 1.0.1
+      uc.micro: 1.0.6
     dev: true
 
   /mdast-util-from-markdown/0.8.5:
@@ -4604,6 +4663,10 @@ packages:
 
   /mdn-data/2.0.30:
     resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
+    dev: true
+
+  /mdurl/1.0.1:
+    resolution: {integrity: sha512-/sKlQJCBYVY9Ers9hqzKou4H6V5UWc/M59TH2dvkt+84itfnq7uFOMLpOiOS4ujvHP4etln18fmIxA5R5fll0g==}
     dev: true
 
   /meow/8.1.2:
@@ -5928,6 +5991,10 @@ packages:
     resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
+    dev: true
+
+  /uc.micro/1.0.6:
+    resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
     dev: true
 
   /ufo/0.8.6:
