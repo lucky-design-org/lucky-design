@@ -30,7 +30,7 @@ mkdir -p "$DIRNAME"
 mkdir -p "$DIRNAME/__tests__"
 
 cat > $DIRNAME/style.scss <<EOF
-.ld-$NAME {
+.ld-$INPUT_NAME {
 
 }
 EOF
@@ -53,7 +53,7 @@ const {  } = defineProps(${NAME}Props)
 </script>
 
 <template>
-  <div class="ld-${NAME}">
+  <div class="ld-${INPUT_NAME}">
     <slot />
   </div>
 </template>
@@ -89,7 +89,7 @@ cat > docs/docs/zh-CN/components/$INPUT_NAME.md <<EOF
 # $INPUT_NAME
 EOF
 
-cat > playground/src/views//$INPUT_NAME.vue <<EOF
+cat > playground/src/views/$NAME.vue <<EOF
 <script setup lang="ts">
 import { L$NAME } from 'lucky-design'
 </script>
