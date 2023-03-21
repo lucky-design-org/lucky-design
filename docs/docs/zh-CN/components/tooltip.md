@@ -1,37 +1,10 @@
 # Tooltip
 
-<script setup>
-import Basic from '../../examples/tooltip/basic.vue'
-</script>
+一个简单的文本弹出提示
 
 ## 基本使用
 
-:::info
-
-<Basic />
-
-:::
-
-::: details code
-
-```vue
-<script setup lang="ts">
-import { LButton, LToolTip } from 'lucky-design'
-</script>
-
-<template>
-  <div class="container">
-    <LToolTip content="默认从下侧显示">
-      <LButton text="按钮" />
-    </LToolTip>
-    <LToolTip content="从右侧显示" placement="left">
-      <LButton text="按钮" />
-    </LToolTip>
-  </div>
-</template>
-```
-
-:::
+<preview path="../../examples/tooltip/basic.vue" title="基础使用" description=""></preview>
 
 ## API
 

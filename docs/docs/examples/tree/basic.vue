@@ -25,38 +25,38 @@ const recursionAddShow = (data: any) => {
 }
 data.value = recursionAddShow([
   {
-    value: '北京',
-    label: '北京',
+    value: 'Beijing',
+    label: 'Beijing',
     children: [
       {
-        value: '北京1-1',
-        label: '北京1-2',
+        value: 'Beijing1-1',
+        label: 'Beijing1-2',
       },
       {
-        value: '北京2-1',
-        label: '北京2-2',
+        value: 'Beijing2-1',
+        label: 'Beijing2-2',
       },
     ],
   },
   {
-    value: '天津',
-    label: '天津',
+    value: 'Shanghai',
+    label: 'Shanghai',
     children: [
       {
-        value: '天津1-1',
+        value: 'Shanghai1-1',
         label: '天津1-2',
       },
       {
-        value: '天津2-1',
-        label: '天津2-2',
+        value: 'Shanghai2-1',
+        label: 'Shanghai2-2',
         children: [
           {
-            value: '天津2-1-1',
-            label: '天津2-1-1',
+            value: 'Shanghai2-1-1',
+            label: 'Shanghai2-1-1',
           },
           {
-            value: '天津2-1-2',
-            label: '天津2-1-2',
+            value: 'Shanghai2-1-2',
+            label: 'Shanghai2-1-2',
           },
         ],
       },
