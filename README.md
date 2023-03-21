@@ -9,10 +9,6 @@
   Lucky Design 可在 vue3 应用程序中快速构建交互界面，简洁, 强大, 美观, 高效
 </p>
 
-<p align="center">
-
-</p>
-
 ## ✨ 特性
 
 - 🪐 n+ 常用组件
@@ -37,10 +33,13 @@
 安装lucky-design
 ```cmd
 # 选择一个你喜欢的包管理器
+
 # NPM
 $ npm install lucky-design --save
+
 # Yarn
 $ yarn add lucky-design --save
+
 # pnpm
 $ pnpm add lucky-design --save
 ```
@@ -53,7 +52,9 @@ import { createApp } from 'vue'
 import LuckyDesign from 'lucky-design'
 import 'lucky-design/dist/style.css'
 import App from './App.vue'
+
 const app = createApp(App)
+
 app.use(LuckyDesign)
 app.mount('#app')
 ```
