@@ -62,26 +62,26 @@ export default defineConfig({
     },
     search: {
       provider: 'local',
-      // options: {
-      //   locales: {
-      //     'zh': {
-      //       translations: {
-      //         button: {
-      //           buttonText: '搜索文档',
-      //           buttonAriaLabel: '搜索文档'
-      //         },
-      //         modal: {
-      //           noResultsText: '无法找到相关结果',
-      //           resetButtonTitle: '清除查询条件',
-      //           footer: {
-      //             selectText: '选择',
-      //             navigateText: '切换'
-      //           }
-      //         }
-      //       }
-      //     }
-      //   },
-      // }
+      options: {
+        locales: {
+          zh: {
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档',
+              },
+              modal: {
+                noResultsText: '无法找到相关结果',
+                resetButtonTitle: '清除查询条件',
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换',
+                },
+              },
+            },
+          },
+        },
+      },
     },
 
     // search: {
@@ -93,11 +93,6 @@ export default defineConfig({
     //   },
     // },
 
-    // algolia: {
-    //   appId: 'Z7DZ7S5F34',
-    //   apiKey: 'f2fc637edfcc09751dcea9a8e26350f4',
-    //   indexName: 'Lucky-design',
-    // },
     // algolia: {
     //   appId: 'ZZ18I131PM',
     //   apiKey: 'b4c172f1a25ceadca6a005ba2bac6192',

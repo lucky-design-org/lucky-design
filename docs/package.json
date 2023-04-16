@@ -4,18 +4,16 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
+    "preview": "vitepress preview docs"
   },
   "dependencies": {
-    "lucky-design": "workspace:*",
-    "vue": "^3.2.45"
+    "lucky-design": "workspace:*"
   },
   "devDependencies": {
     "@vitepress-demo-preview/component": "^2.2.0",
     "@vitepress-demo-preview/plugin": "^1.1.7",
     "markdown-it": "^13.0.1",
     "markdown-it-task-lists": "^2.1.1",
-    "vite": "^4.0.0",
     "vitepress": "1.0.0-alpha.69"
   }
 }
