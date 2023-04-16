@@ -2,11 +2,16 @@
 import { useWindowScroll } from '@vueuse/core'
 import { BacktopProps } from './props'
 
-const { visibilityHeight = document.body.clientHeight, right, bottom } = defineProps(BacktopProps)
+const {
+  visibilityHeight = document.body.clientHeight,
+  right,
+  bottom,
+} = defineProps(BacktopProps)
 const { y } = useWindowScroll()
 
 const backTop = () => {
-  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+  const scrollTop
+    = document.documentElement.scrollTop || document.body.scrollTop
   if (scrollTop > 0) {
     window.requestAnimationFrame(backTop)
     window.scrollTo(0, scrollTop - scrollTop / 8)
@@ -18,7 +23,11 @@ const backTop = () => {
   <transition name="fade-in">
     <div
       class="ld-backtop"
-      :class="[y > visibilityHeight ? 'visible opacity-100' : 'invisible opacity-0']"
+      :class="[
+        Number(y) > visibilityHeight
+          ? 'visible opacity-100'
+          : 'invisible opacity-0',
+      ]"
       :style="{ right: `${right}px`, bottom: `${bottom}` }"
       @click="backTop"
     >

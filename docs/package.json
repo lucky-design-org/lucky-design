@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "vitepress dev docs",
-    "build": "vitepress build docs"
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
   },
   "dependencies": {
     "lucky-design": "workspace:*",
@@ -15,6 +16,6 @@
     "markdown-it": "^13.0.1",
     "markdown-it-task-lists": "^2.1.1",
     "vite": "^4.0.0",
-    "vitepress": "1.0.0-alpha.61"
+    "vitepress": "1.0.0-alpha.69"
   }
 }

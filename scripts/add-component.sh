@@ -85,7 +85,7 @@ cat > docs/docs/components/$INPUT_NAME.md <<EOF
 # $INPUT_NAME
 EOF
 
-cat > docs/docs/zh-CN/components/$INPUT_NAME.md <<EOF
+cat > docs/docs/zh/components/$INPUT_NAME.md <<EOF
 # $INPUT_NAME
 EOF
 

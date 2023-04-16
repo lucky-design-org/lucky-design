@@ -33,6 +33,6 @@ After component development，update component documentation in `docs`
 pnpm dev:docs
 ```
 
-Add the corresponding md file to introduce the component in `docs/docs/components`,synchronize update of Chinese documents in `zh-CN`
+Add the corresponding md file to introduce the component in `docs/docs/components`,synchronize update of Chinese documents in `zh`
 
 After finish add url to `sidebar` in `.vitepress/locales`

@@ -1,5 +1,5 @@
 {
-  "index_name": "Lucky-design",
+  "index_name": "lucky-design",
   "start_urls": ["https://lucky-design.vercel.app/"],
   "rateLimit": 8,
   "maxDepth": 10,
@@ -27,7 +27,7 @@
     ".table-of-contents"
   ],
   "custom_settings": {
-    "attributesForFaceting": ["lang", "tags"]
+    "attributesForFaceting": ["lang"]
   },
   "js_render": true
 }
