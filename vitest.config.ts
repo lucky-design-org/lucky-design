@@ -3,7 +3,7 @@ import Vue from '@vitejs/plugin-vue'
 import { alias } from './alias'
 
 export default defineConfig({
-  plugins: [Vue()],
+  plugins: [Vue() as any],
   optimizeDeps: {
     disabled: true,
   },

@@ -7,7 +7,9 @@
     "preview": "vitepress preview docs"
   },
   "dependencies": {
-    "lucky-design": "workspace:*"
+    "lucky-design": "workspace:*",
+    "vite": "^4.0.0",
+    "vue": "^3.2.45"
   },
   "devDependencies": {
     "@vitepress-demo-preview/component": "^2.2.0",
