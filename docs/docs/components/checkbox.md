@@ -1,32 +1,10 @@
 # Checkbox
 
-<script setup>
-import Basic from '../examples/checkbox/basic.vue'
-
-</script>
-
 Commonly used Checkbox
 
 ## Basic usage
 
-:::info
-
-<Basic />
-
-:::
-
-::: details code
-
-```vue
-<div class="container">
-    <LCheckbox :value="true" @input="handleInput"> 北京 </LCheckbox>
-    <LCheckbox :value="false" :disabled="true"> 上海 </LCheckbox>
-    <LCheckbox :true-value="true"> 广州 </LCheckbox>
-    <LCheckbox :false-value="false"> 杭州 </LCheckbox>
-</div>
-```
-
-:::
+<preview path="../examples/checkbox/basic.vue" title="Basic usage" description=""></preview>
 
 ## API
 

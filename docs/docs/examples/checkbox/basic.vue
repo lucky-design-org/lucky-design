@@ -8,16 +8,16 @@ const handleInput = (value) => {
 <template>
   <div class="container">
     <LCheckbox :value="true" @input="handleInput">
-      北京
+      Beijing
     </LCheckbox>
     <LCheckbox :value="false" :disabled="true">
-      上海
+      Shanghai
     </LCheckbox>
     <LCheckbox :true-value="true">
-      广州
+      GuangZhou
     </LCheckbox>
     <LCheckbox :false-value="false">
-      杭州
+      Hangzhou
     </LCheckbox>
   </div>
 </template>

@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /zh-CN/guide/install
+      link: /zh/guide/install
     - theme: alt
       text: 访问 Github
       link: https://github.com/lucky-design-org/lucky-design

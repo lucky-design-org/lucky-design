@@ -40,7 +40,8 @@ onMounted(() => {
   visible.value = true
 })
 
-useResizeObserver(elRef, () => {
+// TODO: type any
+useResizeObserver(elRef as any, () => {
   height.value = elRef.value!.getBoundingClientRect().height
 })
 const lastOffset = computed(() => getLastOffset(props.id) + props.offset)

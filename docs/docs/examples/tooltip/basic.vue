@@ -4,11 +4,17 @@ import { LButton, LToolTip } from 'lucky-design'
 
 <template>
   <div class="container">
-    <LToolTip content="默认从下侧显示">
-      <LButton text="按钮" />
+    <LToolTip content="default bottom">
+      <LButton text="button" />
     </LToolTip>
-    <LToolTip content="从右侧显示" placement="left">
-      <LButton text="按钮" />
+    <LToolTip content="right" placement="right">
+      <LButton text="button" />
+    </LToolTip>
+    <LToolTip content="top" placement="top">
+      <LButton text="button" />
+    </LToolTip>
+    <LToolTip content="left" placement="left">
+      <LButton text="button" />
     </LToolTip>
   </div>
 </template>

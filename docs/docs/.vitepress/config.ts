@@ -1,4 +1,10 @@
 import { defineConfig } from 'vitepress'
+import {
+  componentPreview,
+  containerPreview,
+} from '@vitepress-demo-preview/plugin'
+import MarkdownIt from 'markdown-it'
+
 import locales from './locales'
 
 export default defineConfig({
@@ -10,8 +16,8 @@ export default defineConfig({
 
   // i18n
   locales: {
-    'root': locales.en,
-    'zh-CN': locales.zh,
+    root: locales.en,
+    zh: locales.zh,
   },
 
   // 从URL中删除尾随的.html
@@ -29,6 +35,9 @@ export default defineConfig({
     config: (md) => {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       md.use(require('markdown-it-task-lists'))
+      md.use(MarkdownIt)
+      md.use(componentPreview)
+      md.use(containerPreview)
     },
   },
 
@@ -52,10 +61,43 @@ export default defineConfig({
       copyright: 'Copyright © 2023-present Lucky-Design',
     },
 
-    algolia: {
-      appId: 'Z7DZ7S5F34',
-      apiKey: 'f2fc637edfcc09751dcea9a8e26350f4',
-      indexName: 'Lucky-design',
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          zh: {
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档',
+              },
+              modal: {
+                noResultsText: '无法找到相关结果',
+                resetButtonTitle: '清除查询条件',
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换',
+                },
+              },
+            },
+          },
+        },
+      },
     },
+
+    // search: {
+    //   provider: 'algolia',
+    //   options: {
+    //     appId: 'ZZ18I131PM',
+    //     apiKey: 'b4c172f1a25ceadca6a005ba2bac6192',
+    //     indexName: 'lucky-design',
+    //   },
+    // },
+
+    // algolia: {
+    //   appId: 'ZZ18I131PM',
+    //   apiKey: 'b4c172f1a25ceadca6a005ba2bac6192',
+    //   indexName: 'lucky-design',
+    // },
   },
 })
