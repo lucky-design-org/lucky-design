@@ -52,10 +52,14 @@ export default defineConfig({
       copyright: 'Copyright © 2023-present Lucky-Design',
     },
 
-    algolia: {
-      appId: 'Z7DZ7S5F34',
-      apiKey: 'f2fc637edfcc09751dcea9a8e26350f4',
-      indexName: 'Lucky-design',
+    search: {
+      provider: 'local',
     },
+
+    // algolia: {
+    //   appId: 'Z7DZ7S5F34',
+    //   apiKey: 'f2fc637edfcc09751dcea9a8e26350f4',
+    //   indexName: 'Lucky-design',
+    // },
   },
 })
