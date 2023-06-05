@@ -9,13 +9,12 @@ const onProgress = (ev: ProgressEvent<XMLHttpRequestEventTarget>) => {
 }
 
 const beforeUpload = (file: File) => {
-  // console.log(file)
   return Promise.resolve()
 }
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <div>
       <p>
         <LUpload
@@ -52,3 +51,14 @@ const beforeUpload = (file: File) => {
     </div>
   </div>
 </template>
+
+<style scoped>
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 300px;
+  gap: 20px;
+  padding: 20px;
+}
+</style>

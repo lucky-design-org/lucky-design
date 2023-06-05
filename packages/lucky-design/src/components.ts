@@ -2,6 +2,7 @@ import {
   LBacktop,
   LButton,
   LCheckbox,
+  // LContainer,
   LDrawer,
   LIcon,
   LMessage,
@@ -20,4 +21,5 @@ export const plugins = [
   LIcon,
   LToolTip,
   LCheckbox,
+  // LContainer,
 ] as const

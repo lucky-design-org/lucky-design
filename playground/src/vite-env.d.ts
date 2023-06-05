@@ -1,6 +1,7 @@
 declare module 'lucky-design' {
   import {
     LButton,
+    LContainer,
     LCheckbox,
     LDrawer,
     LMessage,
@@ -13,6 +14,7 @@ declare module 'lucky-design' {
   export {
     LButton,
     LCheckbox,
+    LContainer,
     LDrawer,
     LMessage,
     LTree,

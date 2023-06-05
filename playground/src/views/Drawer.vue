@@ -32,6 +32,7 @@ const openDrawer = (dire: string) => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 300px;
   gap: 20px;
   height: 100%;
 }

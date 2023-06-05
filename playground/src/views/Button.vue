@@ -5,6 +5,8 @@ import { LButton } from 'lucky-design'
 <template>
   <div class="container">
     <LButton type="primary" text="按钮" size="sm" />
+    <LButton type="primary" text="按钮" :plain="true" />
+    <LButton type="primary" text="按钮" :disabled="true" />
     <LButton type="success" text="按钮" size="lg" />
     <LButton type="warning" text="按钮" :disabled="true" />
     <LButton type="error" text="按钮" shape="circle" />
@@ -14,8 +16,8 @@ import { LButton } from 'lucky-design'
 
 <style scoped>
 .container {
+  margin-top: 300px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;

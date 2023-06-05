@@ -1,7 +1,9 @@
 import { withInstall } from '@lucky-design/common'
 import Checkbox from './checkbox.vue'
 
-export const LCheckbox = withInstall(Checkbox, 'LTree')
+import './style.scss'
+
+export const LCheckbox = withInstall(Checkbox, 'LCheckbox')
 
 export default LCheckbox
 

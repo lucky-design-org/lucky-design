@@ -18,16 +18,15 @@ const setShow = (data: any) => {
 </script>
 
 <template>
-  <ul :style="{ display: show ? 'block' : 'none' }">
+  <ul v-show="show">
     <div v-for="item in data" :key="item.value" @click.stop="setShow(item)">
       <p :style="{ cursor: 'pointer' }">
+        {{ item.show ? item.children && '-' : item.children ? '+' : '' }}
         {{ item.value }}
       </p>
-      <template v-if="item.children">
-        <div>
-          <Tree :data="item.children" :show="item.show" @set-show="setShow" />
-        </div>
-      </template>
+      <div v-show="item.children">
+        <Tree :data="item.children" :show="item.show" @set-show="setShow" />
+      </div>
     </div>
   </ul>
 </template>

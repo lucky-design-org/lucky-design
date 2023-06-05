@@ -3,12 +3,17 @@ import type { SizeType, StatusType } from '@lucky-design/common'
 
 export const buttonProps = {
   /**
-   * @description: Button type
+   * @description Button type
+   * @default primary
    */
   type: {
     type: String as PropType<StatusType | 'primary'>,
     default: 'primary',
   },
+  /**
+   * @description Button plain
+   * @default false
+   */
   plain: {
     type: Boolean as PropType<Boolean | false>,
     default: false,
@@ -19,7 +24,8 @@ export const buttonProps = {
   text: String,
 
   /**
-   * @description: Button shape
+   * @description Button shape
+   * @default square
    */
   shape: {
     type: String as PropType<'round' | 'circle' | 'square'>,
@@ -27,7 +33,8 @@ export const buttonProps = {
   },
 
   /**
-   * @description: Button disabled
+   * @description Button disabled
+   * @default false
    */
   disabled: {
     type: Boolean as PropType<Boolean | false>,
@@ -35,7 +42,8 @@ export const buttonProps = {
   },
 
   /**
-   * @description: Button size
+   * @description Button size
+   * @default md
    */
   size: {
     type: String as PropType<SizeType | 'md'>,

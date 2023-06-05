@@ -25,38 +25,38 @@ const recursionAddShow = (data: any) => {
 }
 data.value = recursionAddShow([
   {
-    value: '北京',
-    label: '北京',
+    value: 'BeiJing',
+    label: 'BeiJing',
     children: [
       {
-        value: '北京1-1',
-        label: '北京1-2',
+        value: 'BeiJing1-1',
+        label: 'BeiJing1-2',
       },
       {
-        value: '北京2-1',
-        label: '北京2-2',
+        value: 'BeiJing2-1',
+        label: 'BeiJing2-2',
       },
     ],
   },
   {
-    value: '天津',
-    label: '天津',
+    value: 'ShangHai',
+    label: 'ShangHai',
     children: [
       {
-        value: '天津1-1',
-        label: '天津1-2',
+        value: 'ShangHai1-1',
+        label: 'ShangHai1-2',
       },
       {
-        value: '天津2-1',
-        label: '天津2-2',
+        value: 'ShangHai2-1',
+        label: 'ShangHai2-2',
         children: [
           {
-            value: '天津2-1-1',
-            label: '天津2-1-1',
+            value: 'ShangHai2-1-1',
+            label: 'ShangHai2-1-2',
           },
           {
-            value: '天津2-1-2',
-            label: '天津2-1-2',
+            value: 'ShangHai2-2-1',
+            label: 'ShangHai2-2-2',
           },
         ],
       },
@@ -66,7 +66,18 @@ data.value = recursionAddShow([
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <LTree :data="data" @set-show="setShow" />
   </div>
 </template>
+
+<style scoped>
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 300px;
+  gap: 20px;
+  padding: 20px;
+}
+</style>

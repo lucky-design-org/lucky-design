@@ -1,3 +1,5 @@
+import { defineProps } from 'vue'
+
 export const asideProps = defineProps({
   width: {
     type: String,
