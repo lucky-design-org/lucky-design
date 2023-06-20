@@ -31,3 +31,8 @@
   --vp-custom-block-tip-text: #7d4ac9;
   --vp-custom-block-tip-bg: #7d4ac92e;
 }
+
+/* vitepress-demo-preview */
+.vitepress-demo-preview__element-plus__container .vitepress-demo-preview-description .vitepress-demo-preview-description__handle-btn {
+  justify-content: center !important;
+}

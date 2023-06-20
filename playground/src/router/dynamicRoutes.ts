@@ -1,6 +1,6 @@
 export default () => {
   const routes = []
-  const modules = import.meta.glob('/src/views/*.vue')
+  const modules = (import.meta as any).glob('/src/views/*.vue')
 
   for (const key in modules) {
     routes.push({
