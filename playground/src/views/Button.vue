@@ -9,6 +9,11 @@ import { LButton } from 'lucky-design'
     <LButton type="warning" text="按钮" :disabled="true" />
     <LButton type="error" text="按钮" shape="circle" />
     <LButton type="info" text="按钮" shape="round" />
+    <LButton type="primary" text="按钮" size="sm" plain="true" />
+    <LButton type="success" text="按钮" size="lg" plain="true" />
+    <LButton type="warning" text="按钮" :disabled="true" plain="true" />
+    <LButton type="error" text="按钮" shape="circle" plain="true" />
+    <LButton type="info" text="按钮" shape="round" plain="true" />
   </div>
 </template>
 

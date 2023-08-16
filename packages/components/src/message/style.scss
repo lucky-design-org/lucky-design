@@ -16,6 +16,7 @@ $iconTypes: (
   box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
   transform: translate(-50%, 0);
   max-width: 50%;
+  z-index: 30;
   @apply bg-white top-20px left-50% px-3 py-2 rd-1 text-gray-5 flex items-center transition-all-300 fixed;
 
   .message-content {

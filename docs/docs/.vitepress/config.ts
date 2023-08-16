@@ -1,4 +1,9 @@
 import { defineConfig } from 'vitepress'
+import {
+  componentPreview,
+  containerPreview,
+} from '@vitepress-demo-preview/plugin'
+
 import locales from './locales'
 
 export default defineConfig({
@@ -29,6 +34,8 @@ export default defineConfig({
     config: (md) => {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       md.use(require('markdown-it-task-lists'))
+      md.use(componentPreview)
+      md.use(containerPreview)
     },
   },
 
@@ -52,10 +59,8 @@ export default defineConfig({
       copyright: 'Copyright © 2023-present Lucky-Design',
     },
 
-    algolia: {
-      appId: 'Z7DZ7S5F34',
-      apiKey: 'f2fc637edfcc09751dcea9a8e26350f4',
-      indexName: 'Lucky-design',
+    search: {
+      provider: 'local',
     },
   },
 })

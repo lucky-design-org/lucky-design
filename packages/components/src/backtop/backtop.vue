@@ -18,7 +18,7 @@ const backTop = () => {
   <transition name="fade-in">
     <div
       class="ld-backtop"
-      :class="[y > visibilityHeight ? 'visible opacity-100' : 'invisible opacity-0']"
+      :class="[y as any > visibilityHeight ? 'visible opacity-100' : 'invisible opacity-0']"
       :style="{ right: `${right}px`, bottom: `${bottom}` }"
       @click="backTop"
     >
