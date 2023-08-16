@@ -67,6 +67,6 @@ data.value = recursionAddShow([
 
 <template>
   <div>
-    <LTree :data="data" @setShow="setShow" />
+    <LTree :data="data" @set-show="setShow" />
   </div>
 </template>
